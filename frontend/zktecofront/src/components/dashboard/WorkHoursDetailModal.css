@@ -1,0 +1,371 @@
+/* WorkHoursDetailModal.css */
+
+.detail-modal-content {
+    background: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 750px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.employee-info-bar {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(130deg, #0c315d -10.59%, #00b3a8 100.59%);
+    color: white;
+}
+
+.employee-info-bar span {
+    font-size: 0.95rem;
+}
+
+/* Navigation Controls */
+.nav-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.nav-controls h4 {
+    margin: 0;
+    color: #0c315d;
+    font-size: 1.1rem;
+}
+
+.nav-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #00b3a8;
+    background: white;
+    color: #00b3a8;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: #00b3a8;
+    color: white;
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: #ccc;
+    color: #ccc;
+}
+
+/* Progress Section */
+.progress-section {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.progress-bar {
+    height: 20px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.progress-percent {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #0c315d;
+}
+
+/* Daily View Styles */
+.daily-view {
+    padding: 1rem;
+}
+
+.daily-view h4 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0c315d;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+    margin-top: 1rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e0e0e0;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 0.75rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -24px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px #00b3a8;
+}
+
+.timeline-item.check-in .timeline-marker {
+    background: #27ae60;
+    box-shadow: 0 0 0 2px #27ae60;
+}
+
+.timeline-item.check-out .timeline-marker {
+    background: #e74c3c;
+    box-shadow: 0 0 0 2px #e74c3c;
+}
+
+.timeline-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.timeline-time {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #0c315d;
+    direction: ltr;
+}
+
+.timeline-label {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.timeline-item.check-in .timeline-label {
+    background: #d4edda;
+    color: #27ae60;
+}
+
+.timeline-item.check-out .timeline-label {
+    background: #f8d7da;
+    color: #e74c3c;
+}
+
+.daily-summary {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f0f9f8;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Weekly View Styles */
+.weekly-view {
+    padding: 1rem;
+}
+
+.weekly-view h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #0c315d;
+}
+
+.week-table {
+    overflow-x: auto;
+}
+
+.week-table table {
+    min-width: 100%;
+}
+
+.weekly-summary {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f0f9f8;
+    border-radius: 8px;
+}
+
+/* Monthly View Styles */
+.monthly-view {
+    padding: 1rem;
+}
+
+.monthly-view h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #0c315d;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 1rem;
+}
+
+.calendar-header {
+    text-align: center;
+    font-weight: 700;
+    padding: 0.5rem;
+    background: #0c315d;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.calendar-header.friday {
+    background: #64748b;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: default;
+    transition: transform 0.2s;
+}
+
+.calendar-day:not(.empty):hover {
+    transform: scale(1.05);
+}
+
+.calendar-day.empty {
+    background: transparent;
+}
+
+.calendar-day.worked {
+    background: #d4edda;
+    color: #27ae60;
+}
+
+.calendar-day.absent {
+    background: #f8d7da;
+    color: #e74c3c;
+}
+
+.calendar-day.future {
+    background: #f0f0f0;
+    color: #999;
+}
+
+.calendar-day.friday-day {
+    background: #e2e8f0;
+    color: #64748b;
+}
+
+.day-number {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.day-status {
+    font-size: 0.75rem;
+    margin-top: 2px;
+}
+
+.calendar-legend {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.legend-color.worked {
+    background: #d4edda;
+}
+
+.legend-color.absent {
+    background: #f8d7da;
+}
+
+.legend-color.future {
+    background: #f0f0f0;
+}
+
+.legend-color.friday-legend {
+    background: #e2e8f0;
+}
+
+.monthly-summary {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    background: #f0f9f8;
+    border-radius: 8px;
+}
+
+/* Loading & No Data */
+.loading {
+    padding: 3rem;
+    text-align: center;
+    color: #666;
+}
+
+.no-data {
+    padding: 3rem;
+    text-align: center;
+    color: #999;
+}
+
+.no-data p {
+    font-size: 1.1rem;
+}

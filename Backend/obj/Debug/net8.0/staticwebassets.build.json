@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "Km6Aoc9AbGxtPJ7GrT8vP64C1UPjZo4grkFlppxMrQI=",
+  "Source": "FingerPrint",
+  "BasePath": "_content/FingerPrint",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FingerPrint\\wwwroot",
+      "Source": "FingerPrint",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\index.html",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}

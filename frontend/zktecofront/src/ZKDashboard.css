@@ -1,0 +1,86 @@
+.dashboard-container {
+    font-family: Arial;
+    padding: 20px;
+    direction: rtl;
+}
+
+.cards-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.tabs button {
+    margin-right: 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tabs button.active {
+    background: #667eea;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* ZKDashboard.css - (إضافة هذه الأجزاء) */
+
+/* ... (التنسيقات السابقة) ... */
+
+/* تنسيق فلاتر التاريخ في تبويب السجلات */
+.date-filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.date-filter-controls label {
+    font-weight: 600;
+    color: #555;
+}
+
+.date-filter-controls input[type="date"] {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* رسالة عدم وجود بيانات */
+.no-data-message {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    background-color: #fff0f0;
+    border: 1px solid #ffdddd;
+    border-radius: 5px;
+    margin-top: 15px;
+}

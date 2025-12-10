@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام الحضور والانصراف</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            direction: rtl;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            background: white;
+            color: #667eea;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-success {
+            background: #48bb78;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .tabs {
+            background: white;
+            border-radius: 12px;
+            padding: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            display: flex;
+            gap: 10px;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            border: none;
+            background: transparent;
+            color: #666;
+            font-weight: 600;
+            font-size: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .stat-card h3 {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .card-header h2 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filters input,
+        .filters select {
+            padding: 10px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        .filters input:focus,
+        .filters select:focus {
+            border-color: #667eea;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #f8f9fa;
+        }
+
+        th {
+            padding: 15px;
+            text-align: right;
+            font-weight: 600;
+            color: #333;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .error {
+            background: #fee;
+            color: #c33;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-right: 4px solid #c33;
+        }
+
+        .users-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .user-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .user-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-color: #667eea;
+        }
+
+        .user-icon {
+            width: 60px;
+            height: 60px;
+            background: #667eea;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div>
+                <h1>نظام إدارة الحضور والانصراف</h1>
+                <p>ZK Fingerprint Attendance System</p>
+            </div>
+            <button class="btn" onclick="connectDevice()" id="connectBtn">
+                🔄 اتصال بالجهاز
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="errorMsg" class="error hidden"></div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3>إجمالي السجلات</h3>
+                <div class="number" id="totalLogs">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>عدد الموظفين</h3>
+                <div class="number" id="totalUsers">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>حضور اليوم</h3>
+                <div class="number" id="todayAttendance">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>سجلات اليوم</h3>
+                <div class="number" id="todayLogs">0</div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('logs')">
+                🕐 سجل الحضور
+            </button>
+            <button class="tab" onclick="switchTab('users')">
+                👥 الموظفين
+            </button>
+        </div>
+
+        <div id="logsTab" class="card">
+            <div class="card-header">
+                <h2>سجلات الحضور والانصراف</h2>
+                <div class="filters">
+                    <input type="date" id="filterDate" onchange="applyFilters()">
+                    <select id="filterUser" onchange="applyFilters()">
+                        <option value="">كل الموظفين</option>
+                    </select>
+                    <button class="btn btn-success" onclick="exportCSV()">
+                        📥 تصدير CSV
+                    </button>
+                    <button class="btn btn-primary" onclick="loadLogs()">
+                        🔄 تحديث
+                    </button>
+                </div>
+            </div>
+            <div id="logsContent">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>جاري التحميل...</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="usersTab" class="card hidden">
+            <div class="card-header">
+                <h2>قائمة الموظفين</h2>
+                <button class="btn btn-primary" onclick="loadUsers()">
+                    🔄 تحديث
+                </button>
+            </div>
+            <div id="usersContent">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>جاري التحميل...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = '/api/ZKPython';
+        let allLogs = [];
+        let allUsers = [];
+
+        function showError(msg) {
+            const errorDiv = document.getElementById('errorMsg');
+            errorDiv.textContent = msg;
+            errorDiv.classList.remove('hidden');
+            setTimeout(() => errorDiv.classList.add('hidden'), 5000);
+        }
+
+        function parseLogsData(data) {
+            if (!data || data.startsWith('ERROR')) {
+                throw new Error(data || 'فشل في جلب البيانات');
+            }
+
+            const lines = data.split('\n').filter(line => line.trim());
+            const logs = [];
+
+            lines.forEach(line => {
+                const match = line.match(/UserID:\s*(\d+),\s*Time:\s*(.+)/);
+                if (match) {
+                    logs.push({
+                        userId: match[1],
+                        timestamp: match[2].trim()
+                    });
+                }
+            });
+
+            return logs;
+        }
+
+        async function connectDevice() {
+            const btn = document.getElementById('connectBtn');
+            btn.disabled = true;
+            btn.textContent = '⏳ جاري الاتصال...';
+
+            try {
+                const response = await fetch(`${API_BASE}/connect`);
+                const result = await response.json();
+
+                if (result.success) {
+                    alert('✅ تم الاتصال بالجهاز بنجاح');
+                } else {
+                    showError(result.data);
+                }
+            } catch (err) {
+                showError('فشل الاتصال بالجهاز');
+            }
+
+            btn.disabled = false;
+            btn.textContent = '🔄 اتصال بالجهاز';
+        }
+
+        async function loadLogs() {
+            const content = document.getElementById('logsContent');
+            content.innerHTML = '<div class="loading"><div class="spinner"></div><p>جاري التحميل...</p></div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/logs`);
+                const result = await response.json();
+
+                if (result.success) {
+                    allLogs = parseLogsData(result.data);
+                    allUsers = [...new Set(allLogs.map(log => log.userId))].sort((a, b) => a - b);
+
+                    updateUserFilter();
+                    updateStats();
+                    displayLogs(allLogs);
+                } else {
+                    showError(result.data);
+                    content.innerHTML = '<div class="loading"><p>فشل في تحميل البيانات</p></div>';
+                }
+            } catch (err) {
+                showError('فشل الاتصال بالخادم');
+                content.innerHTML = '<div class="loading"><p>فشل الاتصال بالخادم</p></div>';
+            }
+        }
+
+        async function loadUsers() {
+            const content = document.getElementById('usersContent');
+            content.innerHTML = '<div class="loading"><div class="spinner"></div><p>جاري التحميل...</p></div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/users`);
+                const result = await response.json();
+
+                if (result.success) {
+                    const logs = parseLogsData(result.data);
+                    allUsers = [...new Set(logs.map(log => log.userId))].sort((a, b) => a - b);
+                    displayUsers();
+                } else {
+                    showError(result.data);
+                    content.innerHTML = '<div class="loading"><p>فشل في تحميل البيانات</p></div>';
+                }
+            } catch (err) {
+                showError('فشل الاتصال بالخادم');
+                content.innerHTML = '<div class="loading"><p>فشل الاتصال بالخادم</p></div>';
+            }
+        }
+
+        function updateUserFilter() {
+            const select = document.getElementById('filterUser');
+            select.innerHTML = '<option value="">كل الموظفين</option>';
+            allUsers.forEach(userId => {
+                const option = document.createElement('option');
+                option.value = userId;
+                option.textContent = `موظف ${userId}`;
+                select.appendChild(option);
+            });
+        }
+
+        function updateStats() {
+            const today = new Date().toISOString().split('T')[0];
+            const todayLogs = allLogs.filter(log => log.timestamp.includes(today));
+            const uniqueToday = new Set(todayLogs.map(log => log.userId)).size;
+
+            document.getElementById('totalLogs').textContent = allLogs.length;
+            document.getElementById('totalUsers').textContent = allUsers.length;
+            document.getElementById('todayAttendance').textContent = uniqueToday;
+            document.getElementById('todayLogs').textContent = todayLogs.length;
+        }
+
+        function applyFilters() {
+            const dateFilter = document.getElementById('filterDate').value;
+            const userFilter = document.getElementById('filterUser').value;
+
+            const filtered = allLogs.filter(log => {
+                const matchesDate = !dateFilter || log.timestamp.includes(dateFilter);
+                const matchesUser = !userFilter || log.userId === userFilter;
+                return matchesDate && matchesUser;
+            });
+
+            displayLogs(filtered);
+        }
+
+        function displayLogs(logs) {
+            const content = document.getElementById('logsContent');
+
+            if (logs.length === 0) {
+                content.innerHTML = '<div class="loading"><p>لا توجد سجلات</p></div>';
+                return;
+            }
+
+            let html = '<table><thead><tr><th>#</th><th>رقم الموظف</th><th>التاريخ</th><th>الوقت</th></tr></thead><tbody>';
+
+            logs.forEach((log, idx) => {
+                const [date, time] = log.timestamp.split(' ');
+                html += `
+                    <tr>
+                        <td>${idx + 1}</td>
+                        <td><strong>${log.userId}</strong></td>
+                        <td>${date}</td>
+                        <td>${time}</td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            content.innerHTML = html;
+        }
+
+        function displayUsers() {
+            const content = document.getElementById('usersContent');
+
+            if (allUsers.length === 0) {
+                content.innerHTML = '<div class="loading"><p>لا يوجد موظفين</p></div>';
+                return;
+            }
+
+            let html = '<div class="users-grid">';
+
+            allUsers.forEach(userId => {
+                const userLogs = allLogs.filter(log => log.userId === userId);
+                html += `
+                    <div class="user-card">
+                        <div class="user-icon">${userId}</div>
+                        <h3>موظف ${userId}</h3>
+                        <p style="color: #666; margin-top: 10px;">${userLogs.length} سجل</p>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+            content.innerHTML = html;
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+
+            document.getElementById('logsTab').classList.add('hidden');
+            document.getElementById('usersTab').classList.add('hidden');
+
+            if (tab === 'logs') {
+                document.getElementById('logsTab').classList.remove('hidden');
+                if (allLogs.length === 0) loadLogs();
+            } else {
+                document.getElementById('usersTab').classList.remove('hidden');
+                if (allUsers.length === 0) loadUsers();
+            }
+        }
+
+        function exportCSV() {
+            const dateFilter = document.getElementById('filterDate').value;
+            const userFilter = document.getElementById('filterUser').value;
+
+            const filtered = allLogs.filter(log => {
+                const matchesDate = !dateFilter || log.timestamp.includes(dateFilter);
+                const matchesUser = !userFilter || log.userId === userFilter;
+                return matchesDate && matchesUser;
+            });
+
+            let csv = 'User ID,Timestamp\n';
+            filtered.forEach(log => {
+                csv += `${log.userId},${log.timestamp}\n`;
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `attendance_${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+        }
+
+        // تحميل البيانات عند فتح الصفحة
+        window.onload = () => loadLogs();
+    </script>
+</body>
+
+</html>
