@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FingerPrint.Data;
 using FingerPrint.Models;
+using Microsoft.AspNetCore.Authorization;
+using FingerPrint.Models.Enums;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -16,7 +18,6 @@ public class ZKPythonController : ControllerBase
         _pythonService = pythonService ?? throw new ArgumentNullException(nameof(pythonService));
     }
 
-    // 1️⃣ جلب كل السجلات (بدعم Pagination)
     [HttpGet("get-logs")]
     public async Task<IActionResult> GetLogs([FromQuery] int page = 1, [FromQuery] int pageSize = 100, [FromQuery] string deviceIp = null)
     {
@@ -40,7 +41,6 @@ public class ZKPythonController : ControllerBase
 
         return Ok(new { success = true, total, page, pageSize, count = logs.Count, data = logs });
     }
-
 
     [HttpGet("get-logs_from_device")]
     public async Task<IActionResult> GetLogsByDevice([FromQuery] int page = 1, [FromQuery] int pageSize = 100, [FromQuery] string deviceIp = null)
@@ -75,7 +75,7 @@ public class ZKPythonController : ControllerBase
     }
 
     [HttpPost("sync-users")]
-    public async Task<IActionResult> SyncUsers([FromQuery] string deviceIp)
+    public async Task<IActionResult> SyncUsers([FromQuery] string? deviceIp)
     {
         try
         {
@@ -88,36 +88,64 @@ public class ZKPythonController : ControllerBase
                 var usersNode = result["users"]?.AsArray();
                 if (usersNode != null)
                 {
+                    // Pre-fetch all existing usernames to handle uniqueness in-memory
+                    var existingUsernames = await _context.UserInfos
+                                            .Select(u => u.Username)
+                                            .ToListAsync();
+                    var usedNames = new HashSet<string>(existingUsernames, StringComparer.OrdinalIgnoreCase);
+
                     foreach (var u in usersNode)
                     {
-                        var userId = u["UserID"]?.ToString();
+                        var userId = u["UserID"]?.ToString() ?? "";
                         var name = u["Name"]?.ToString();
+                        
+                        if (string.IsNullOrWhiteSpace(userId)) continue;
+
+                        if (string.IsNullOrWhiteSpace(name)) name = $"User_{userId}";
+
                         var card = u["Card"]?.ToString();
-                        var role = u["Role"]?.ToString();
                         var password = u["Password"]?.ToString();
 
-                        // Find by UserID AND DeviceIp
-                        var existingUser = await _context.UserInfos.FindAsync(userId, deviceIp);
+                        var existingUser = await _context.UserInfos
+                            .FirstOrDefaultAsync(x => x.DeviceUserID == userId && x.DeviceIp == deviceIp);
+                        
+                        // Determine the final unique username
+                        string finalName = name;
+                        
+                        // If we are adding a NEW user, or changing the name of an existing user
+                        if (existingUser == null || !string.Equals(existingUser.Username, finalName, StringComparison.OrdinalIgnoreCase))
+                        {
+                            int suffix = 1;
+                            while (usedNames.Contains(finalName))
+                            {
+                                finalName = $"{name}_{suffix}";
+                                suffix++;
+                            }
+                        }
+
                         if (existingUser == null)
                         {
-                            _context.UserInfos.Add(new UserInfo
+                            var newUser = new UserInfo
                             {
-                                UserID = userId,
+                                DeviceUserID = userId,
                                 DeviceIp = deviceIp,
-                                Name = name,
+                                Username = finalName,
                                 Card = card,
-                                Role = role,
                                 Password = password,
-                                // Department/Section will be null initially
-                            });
+                            };
+                            _context.UserInfos.Add(newUser);
+                            usedNames.Add(finalName);
                         }
                         else
                         {
-                            // Update name if changed?
-                            existingUser.Name = name;
+                            // If name changed, we use the resolved unique finalName
+                            // If name didn't change, finalName == existingUser.Username (which is already in usedNames)
+                            existingUser.Username = finalName;
                             existingUser.Card = card;
-                            existingUser.Role = role;
                             existingUser.Password = password;
+                            
+                            // No need to add to usedNames if it was already there, but safe to add
+                            usedNames.Add(finalName); 
                         }
                     }
                     await _context.SaveChangesAsync();
@@ -131,7 +159,8 @@ public class ZKPythonController : ControllerBase
         }
         catch (Exception ex)
         {
-            return StatusCode(500, new { success = false, error = ex.Message });
+            var innerMessage = ex.InnerException?.Message ?? "";
+            return StatusCode(500, new { success = false, error = ex.Message, innerError = innerMessage });
         }
     }
 // 9️⃣ البحث (على اسم)
@@ -574,12 +603,12 @@ public class ZKPythonController : ControllerBase
                 
                 var newUser = new UserInfo
                 {
-                    UserID = userId,
+                    DeviceUserID = userId,
                     DeviceIp = req.DeviceIp,
-                    Name = req.UserName,
+                    Username = req.UserName,
                     Department = req.Department,
                     Section = req.Section,
-                    Role = "User" // Default
+                    Role =  UserType.Emplpoyee  // Default
                 };
 
                 _context.UserInfos.Add(newUser);
@@ -599,39 +628,35 @@ public class ZKPythonController : ControllerBase
     }
 
     [HttpPost("edit-user")]
-    public async Task<IActionResult> EditUser([FromBody] AddUserRequest req, [FromQuery] string userId)
+    public async Task<IActionResult> EditUser([FromBody] AddUserRequest req, [FromQuery] int userId)
     {
         try
         {
+            var user = await _context.UserInfos.FindAsync(userId);
+            if (user == null)
+            {
+                return NotFound(new { success = false, message = "User not found in database" });
+            }
+
             // 1. Edit on Device via Python
-            var result = _pythonService.RunPythonEditUser(req.DeviceIp, userId, req.UserName);
+            // Use DeviceUserID from DB for the device operation
+            var deviceUserId = user.DeviceUserID; 
+            if (string.IsNullOrEmpty(deviceUserId))
+            {
+                // Fallback or error? specific logic might depend on if device requires ID.
+                return BadRequest(new { success = false, message = "User has no DeviceUserID linked" });
+            }
+
+            var result = _pythonService.RunPythonEditUser(req.DeviceIp, deviceUserId, req.UserName);
 
             if (result["success"]?.GetValue<bool>() == true)
             {
                 // 2. Update Database
-                var user = await _context.UserInfos.FindAsync(userId, req.DeviceIp);
-                if (user != null)
-                {
-                    user.Name = req.UserName;
-                    user.Department = req.Department;
-                    user.Section = req.Section;
-                    await _context.SaveChangesAsync();
-                }
-                else
-                {
-                    // If user doesn't exist in DB, create them
-                    var newUser = new UserInfo
-                    {
-                        UserID = userId,
-                        DeviceIp = req.DeviceIp,
-                        Name = req.UserName,
-                        Department = req.Department,
-                        Section = req.Section,
-                        Role = "User"
-                    };
-                    _context.UserInfos.Add(newUser);
-                    await _context.SaveChangesAsync();
-                }
+                user.Username = req.UserName;
+                user.Department = req.Department;
+                user.Section = req.Section;
+                // If the device updated the name, ensure we save changes
+                await _context.SaveChangesAsync();
 
                 return Ok(new { success = true, message = "User updated successfully" });
             }
@@ -647,22 +672,43 @@ public class ZKPythonController : ControllerBase
     }
 
     [HttpPost("delete-user")]
-    public async Task<IActionResult> DeleteUser([FromQuery] string deviceIp, [FromQuery] string userId)
+    public async Task<IActionResult> DeleteUser([FromQuery] string deviceIp, [FromQuery] int userId)
     {
         try
         {
+            var user = await _context.UserInfos.FindAsync(userId);
+            if (user == null)
+            {
+                 return NotFound(new { success = false, message = "User not found in database" });
+            }
+
             // 1. Delete from Device via Python
-            var result = _pythonService.RunPythonDeleteUser(deviceIp, userId);
+            var deviceUserId = user.DeviceUserID;
+            if (string.IsNullOrEmpty(deviceUserId))
+            {
+                 // If no device ID, maybe just delete from DB? 
+                 // But let's check validation protocols.
+                 // For now, proceed to warn or just allow DB delete if force?
+                 // Let's assume we try to delete from device if we have a DeviceUserID.
+            }
+            
+            var result = new System.Text.Json.Nodes.JsonObject();
+            if (!string.IsNullOrEmpty(deviceUserId))
+            {
+                result = _pythonService.RunPythonDeleteUser(deviceIp, deviceUserId);
+            }
+            else
+            {
+                // If null, mock success to allow DB delete? Or error?
+                // Assuming success to allow cleanup of broken records
+                result["success"] = true; 
+            }
 
             if (result["success"]?.GetValue<bool>() == true)
             {
                 // 2. Delete from Database
-                var user = await _context.UserInfos.FindAsync(userId, deviceIp);
-                if (user != null)
-                {
-                    _context.UserInfos.Remove(user);
-                    await _context.SaveChangesAsync();
-                }
+                _context.UserInfos.Remove(user);
+                await _context.SaveChangesAsync();
 
                 return Ok(new { success = true, message = "User deleted successfully" });
             }

@@ -1,7 +1,23 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import apiService from '../../utils/api';
 import './Dashboard.css';
 
 const DashboardLayout = ({ activeTab, setActiveTab, children }) => {
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+        try {
+            await apiService.logout();
+            navigate('/login');
+        } catch (error) {
+            console.error('Logout failed:', error);
+            // Force logout even if API fails
+            localStorage.removeItem('accessToken');
+            localStorage.removeItem('refreshToken');
+            navigate('/login');
+        }
+    };
     const menuItems = [
         { id: 'logs', label: 'سجلات الحضور', icon: '' },
         { id: 'users', label: ' الموظفين', icon: '' },
@@ -34,6 +50,14 @@ const DashboardLayout = ({ activeTab, setActiveTab, children }) => {
                             {item.label}
                         </button>
                     ))}
+
+                    <button
+                        className="nav-item logout-button"
+                        onClick={handleLogout}
+                        style={{ marginTop: 'auto', borderTop: '1px solid rgba(255,255,255,0.1)' }}
+                    >
+                        تسجيل خروج
+                    </button>
                 </nav>
             </aside>
 

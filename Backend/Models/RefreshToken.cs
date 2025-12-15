@@ -1,10 +1,18 @@
 using FingerPrint.Models;
 
-public class RefreshToken : Entity
+public class RefreshToken
 {
-    public string Token { get; set; }
-    public DateTime Expires { get; set; }
-    public bool IsRevoked { get; set; }
-    public int UserInfoId { get; set; }
-    public UserInfo UserInfo { get; set; }
+    public int Id { get; set; }
+    public string Token { get; set; } = string.Empty;
+    public DateTime ExpiresAt { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime? RevokedAt { get; set; }
+    public string? ReplacedByToken { get; set; }
+    public string? ReasonRevoked { get; set; }
+    public int UserId { get; set; }
+    public UserInfo User { get; set; } = null!;
+
+    public bool IsExpired => DateTime.UtcNow >= ExpiresAt;
+    public bool IsRevoked => RevokedAt != null;
+    public bool IsActive => !IsRevoked && !IsExpired;
 }

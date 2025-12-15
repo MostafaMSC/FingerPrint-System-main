@@ -44,14 +44,14 @@ const LogsTable = ({ deviceIp }) => {
     }, []);
 
     // --- Logs Tab Functions ---
-    const fetchLogs = async (currentPage, search) => {
+    const fetchLogs = async () => {
         setLoadingLogs(true);
         try {
             const params = new URLSearchParams({
-                page: currentPage,
+                page: page,
                 pageSize: pageSize,
                 deviceIp: deviceIp || '',
-                search: search || '',
+                search: searchTerm || '',
                 dateFrom: dateFrom || '',
                 dateTo: dateTo || ''
             });
@@ -93,17 +93,19 @@ const filteredLogs = logs
         }
     });
 
-    // useEffect(() => {
-    //     const timer = setTimeout(() => {
-    //         setPage(1);
-    //         fetchLogs(1, searchTerm);
-    //     }, 500);
-    //     return () => clearTimeout(timer);
-    // }, [searchTerm, deviceIp, dateFrom, dateTo]);
+useEffect(() => {
+    // إذا تغير البحث أو التاريخ، نعود للصفحة الأولى
+    // لكن لا نستدعي fetchLogs هنا مباشرة لمنع التكرار
+    const timer = setTimeout(() => {
+        if (page !== 1 && (searchTerm !== '' || dateFrom !== '' || dateTo !== '')) {
+            setPage(1);
+        } else {
+            fetchLogs();
+        }
+    }, 500);
 
-    useEffect(() => {
-        fetchLogs(page, searchTerm);
-    }, [page]);
+    return () => clearTimeout(timer);
+}, [searchTerm, deviceIp, dateFrom, dateTo, page]);
 
     const calculateLateMinutes = (checkInTime) => {
         if (!checkInTime || checkInTime === '-') return 0;

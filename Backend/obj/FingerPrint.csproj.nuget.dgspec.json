@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\FingerPrint.csproj": {}
+    "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\FingerPrint.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\FingerPrint.csproj": {
+    "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\FingerPrint.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\FingerPrint.csproj",
+        "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\FingerPrint.csproj",
         "projectName": "FingerPrint",
-        "projectPath": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\FingerPrint.csproj",
+        "projectPath": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\FingerPrint.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\obj\\",
+        "outputPath": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +43,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -65,7 +69,11 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.6.2, )"
+              "version": "[6.5.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.2.0, )"
             }
           },
           "imports": [

@@ -7,25 +7,25 @@ public class PythonService
     // قراءة logs من جهاز البصمة
     public JsonObject RunPython(string deviceIp)
     {
-        return RunPythonScript("read_zk.py", $"{deviceIp}");
+        return RunPythonScript("../PythonScript/read_zk.py", $"{deviceIp}");
     }
 
     // إضافة مستخدم جديد
     public JsonObject RunPythonAddUser(string deviceIp, string userName)
     {
-        return RunPythonScript("AddNewUserToDevice.py", $"{deviceIp} \"{userName}\"");
+        return RunPythonScript("../PythonScript/AddNewUserToDevice.py", $"{deviceIp} \"{userName}\"");
     }
 
     // تعديل مستخدم
     public JsonObject RunPythonEditUser(string deviceIp, string userId, string newName)
     {
-        return RunPythonScript("edit_user.py", $"{deviceIp} {userId} \"{newName}\"");
+        return RunPythonScript("../PythonScript/edit_user.py", $"{deviceIp} {userId} \"{newName}\"");
     }
 
     // حذف مستخدم
     public JsonObject RunPythonDeleteUser(string deviceIp, string userId)
     {
-        return RunPythonScript("delete_user.py", $"{deviceIp} {userId}");
+        return RunPythonScript("../PythonScript/delete_user.py", $"{deviceIp} {userId}");
     }
 
     // جلب كل المستخدمين من الجهاز
@@ -36,7 +36,7 @@ public class PythonService
         // Let's assume we create `get_users.py` or modify `read_zk.py`?
         // Actually `AddNewUserToDevice.py` had code to get users.
         // Let's create `get_users.py`.
-        return RunPythonScript("get_users.py", $"{deviceIp}");
+        return RunPythonScript("../PythonScript/get_users.py", $"{deviceIp}");
     }
 
     // الدالة العامة لتشغيل أي سكربت

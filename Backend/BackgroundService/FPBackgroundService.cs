@@ -101,7 +101,15 @@ namespace FingerPrint.BackgroundService
                     Console.WriteLine($"FPBackgroundService Critical Error: {ex.Message}");
                 }
 
-                await Task.Delay(TimeSpan.FromMinutes(0.1), stoppingToken);
+                try
+                {
+                    await Task.Delay(TimeSpan.FromMinutes(0.1), stoppingToken);
+                }
+                catch (OperationCanceledException)
+                {
+                    // Cancellation requested - exit the loop gracefully
+                    break;
+                }
             }
         }
     }

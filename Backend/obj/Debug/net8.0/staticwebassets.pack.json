@@ -1,8 +1,88 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\index.html",
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\ARCHITECTURE.md",
+      "PackagePath": "staticwebassets\\ARCHITECTURE.md"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\BUGFIX_SEARCH_DISAPPEAR.md",
+      "PackagePath": "staticwebassets\\BUGFIX_SEARCH_DISAPPEAR.md"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\COMPARISON.md",
+      "PackagePath": "staticwebassets\\COMPARISON.md"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\COMPLETE.md",
+      "PackagePath": "staticwebassets\\COMPLETE.md"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\FIX_SUMMARY_AR.md",
+      "PackagePath": "staticwebassets\\FIX_SUMMARY_AR.md"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\INDEX.md",
+      "PackagePath": "staticwebassets\\INDEX.md"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\QUICK_REFERENCE.md",
+      "PackagePath": "staticwebassets\\QUICK_REFERENCE.md"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\README.md",
+      "PackagePath": "staticwebassets\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\SUMMARY.md",
+      "PackagePath": "staticwebassets\\SUMMARY.md"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\TESTING_GUIDE.md",
+      "PackagePath": "staticwebassets\\TESTING_GUIDE.md"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\api.js",
+      "PackagePath": "staticwebassets\\js\\api.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\device.js",
+      "PackagePath": "staticwebassets\\js\\device.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\filters.js",
+      "PackagePath": "staticwebassets\\js\\filters.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\logs.js",
+      "PackagePath": "staticwebassets\\js\\logs.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\stats.js",
+      "PackagePath": "staticwebassets\\js\\stats.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\tabs.js",
+      "PackagePath": "staticwebassets\\js\\tabs.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\users.js",
+      "PackagePath": "staticwebassets\\js\\users.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\utils.js",
+      "PackagePath": "staticwebassets\\js\\utils.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\styles.css",
+      "PackagePath": "staticwebassets\\styles.css"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FingerPrint.Microsoft.AspNetCore.StaticWebAssets.props",
