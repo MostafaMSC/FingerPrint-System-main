@@ -12,9 +12,7 @@ const DashboardLayout = ({ activeTab, setActiveTab, children }) => {
             navigate('/login');
         } catch (error) {
             console.error('Logout failed:', error);
-            // Force logout even if API fails
-            localStorage.removeItem('accessToken');
-            localStorage.removeItem('refreshToken');
+            // Force navigation even if API fails
             navigate('/login');
         }
     };

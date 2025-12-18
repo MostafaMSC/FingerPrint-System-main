@@ -32,7 +32,8 @@ public async Task<IActionResult> Register([FromBody] RegisterRequest request, Ca
     try
     {
         var response = await _authService.RegisterAsync(request, cancellationToken);
-        return Ok(response);
+        SetTokenCookie(response.AccessToken, response.RefreshToken);
+        return Ok(new { message = "Registration successful" });
     }
     catch (ArgumentException ex)
     {
@@ -64,7 +65,8 @@ public async Task<IActionResult> Register([FromBody] RegisterRequest request, Ca
             try
             {
                 var response = await _authService.LoginAsync(request, cancellationToken);
-                return Ok(response);
+                SetTokenCookie(response.AccessToken, response.RefreshToken);
+                return Ok(new { message = "Login successful" });
             }
             catch (UnauthorizedAccessException ex)
             {
@@ -84,8 +86,15 @@ public async Task<IActionResult> Register([FromBody] RegisterRequest request, Ca
         {
             try
             {
-                var response = await _authService.RefreshTokenAsync(request.RefreshToken, cancellationToken);
-                return Ok(response);
+                var refreshToken = request.RefreshToken ?? Request.Cookies["refreshToken"];
+                if (string.IsNullOrEmpty(refreshToken))
+                {
+                    return BadRequest(new { message = "Refresh token is required" });
+                }
+
+                var response = await _authService.RefreshTokenAsync(refreshToken, cancellationToken);
+                SetTokenCookie(response.AccessToken, response.RefreshToken);
+                return Ok(new { message = "Token refreshed successfully" });
             }
             catch (UnauthorizedAccessException ex)
             {
@@ -131,6 +140,8 @@ public async Task<IActionResult> Register([FromBody] RegisterRequest request, Ca
                 }
 
                 await _authService.LogoutAsync(userId, cancellationToken);
+                Response.Cookies.Delete("accessToken");
+                Response.Cookies.Delete("refreshToken");
                 return Ok(new { message = "Logged out successfully" });
             }
             catch (Exception ex)
@@ -138,6 +149,39 @@ public async Task<IActionResult> Register([FromBody] RegisterRequest request, Ca
                 _logger.LogError(ex, "Error during logout");
                 return StatusCode(500, new { message = "An error occurred during logout" });
             }
+        }
+
+        [Authorize]
+        [HttpGet("me")]
+        public IActionResult Me()
+        {
+            return Ok(new 
+            { 
+                Id = User.FindFirst(ClaimTypes.NameIdentifier)?.Value,
+                Username = User.Identity?.Name,
+                Role = User.FindFirst(ClaimTypes.Role)?.Value
+            });
+        }
+
+        private void SetTokenCookie(string token, string refreshToken)
+        {
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = Request.IsHttps,
+                SameSite = SameSiteMode.Lax,
+                Expires = DateTime.UtcNow.AddMinutes(90) // Match access token lifetime
+            };
+            Response.Cookies.Append("accessToken", token, cookieOptions);
+
+            var refreshCookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = Request.IsHttps,
+                SameSite = SameSiteMode.Lax,
+                Expires = DateTime.UtcNow.AddDays(7) // Match refresh token lifetime
+            };
+            Response.Cookies.Append("refreshToken", refreshToken, refreshCookieOptions);
         }
     }
 }

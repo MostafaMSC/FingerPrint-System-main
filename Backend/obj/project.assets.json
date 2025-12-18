@@ -3116,11 +3116,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\FingerPrint.csproj",
+      "projectUniqueName": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\FingerPrint.csproj",
       "projectName": "FingerPrint",
-      "projectPath": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\FingerPrint.csproj",
+      "projectPath": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\FingerPrint.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\obj\\",
+      "outputPath": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"

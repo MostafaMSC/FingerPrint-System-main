@@ -1,88 +1,380 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\ARCHITECTURE.md",
-      "PackagePath": "staticwebassets\\ARCHITECTURE.md"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk.html",
+      "PackagePath": "staticwebassets\\TwoKeyOk.html"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\BUGFIX_SEARCH_DISAPPEAR.md",
-      "PackagePath": "staticwebassets\\BUGFIX_SEARCH_DISAPPEAR.md"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\01JMCC2ZGZPWD1K585X8A96G4A.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\01JMCC2ZGZPWD1K585X8A96G4A.png"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\COMPARISON.md",
-      "PackagePath": "staticwebassets\\COMPARISON.md"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\01JMCCN45ADKPHZQPC0N8Q68MQ.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\01JMCCN45ADKPHZQPC0N8Q68MQ.png"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\COMPLETE.md",
-      "PackagePath": "staticwebassets\\COMPLETE.md"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\01JMCDB8GA1ZVGWVJXYYFM4EPK.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\01JMCDB8GA1ZVGWVJXYYFM4EPK.png"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\FIX_SUMMARY_AR.md",
-      "PackagePath": "staticwebassets\\FIX_SUMMARY_AR.md"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\499562706073322",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\INDEX.md",
-      "PackagePath": "staticwebassets\\INDEX.md"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\about-circle.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\about-circle.png"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\QUICK_REFERENCE.md",
-      "PackagePath": "staticwebassets\\QUICK_REFERENCE.md"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\about-icon1.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\about-icon1.png"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\README.md",
-      "PackagePath": "staticwebassets\\README.md"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\about-icon2.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\about-icon2.png"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\SUMMARY.md",
-      "PackagePath": "staticwebassets\\SUMMARY.md"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\about-line.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\about-line.png"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\TESTING_GUIDE.md",
-      "PackagePath": "staticwebassets\\TESTING_GUIDE.md"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\all.min.css",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\all.min.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\index.html",
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\animate.css",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\banner-line.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\banner-line.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\bigHome.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\bigHome.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\bootstrap.min.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\bootstrap.min.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\brand-image1.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\brand-image1.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\brand-image2.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\brand-image2.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\brand-image3.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\brand-image3.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\brand-shape.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\brand-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image1.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\case-image1.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image2.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\case-image2.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image3.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\case-image3.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image4.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\case-image4.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image5.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\case-image5.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image6.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\case-image6.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image7.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\case-image7.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image8.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\case-image8.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\css2",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\data2.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\data2.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\dataanalysis.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\dataanalysis.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\earth.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\earth.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\fbevents.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\fbevents.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\footer-regular-left.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\footer-regular-left.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\footer-regular-right.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\footer-regular-right.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\footer-shadow-shape.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\footer-shadow-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\footer-solid-left.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\footer-solid-left.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\footer-solid-right.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\footer-solid-right.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\insight.min.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\insight.min.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\isotope.pkgd.min.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\isotope.pkgd.min.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\jquery-3.7.1.min.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\jquery-3.7.1.min.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\jquery.counterup.min.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\jquery.counterup.min.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\jquery.waypoints.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\jquery.waypoints.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\logo-light.svg",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\logo-light.svg"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\magnific-popup.min.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\magnific-popup.min.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\meanmenu.css",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\meanmenu.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\meanmenu.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\meanmenu.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\nice-select.css",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\nice-select.min.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\nice-select.min.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\offer-bg-shape-left.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\offer-bg-shape-left.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\offer-bg-shape-right.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\offer-bg-shape-right.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\offer-shadow-shape.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\offer-shadow-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\pace.min.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\pace.min.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\process-image1.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\process-image1.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\process-image2.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\process-image2.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\process-image3.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\process-image3.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\script.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\script.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\section-title.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\section-title.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\service-bg-shape.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\service-bg-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\service-icon1.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\service-icon1.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\service-icon3.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\service-icon3.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\service-item-shape(1).png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\service-item-shape(1).png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\service-item-shape.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\service-item-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\smallHome.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\smallHome.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\ssl-icon.png",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\ssl-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\style232.css",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\style232.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\styles.css",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\swiper-bundle.min.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\swiper-bundle.min.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\vcd15cbe7772f49c399c6a5babf22c1241717689176015",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\wow.min.js.download",
+      "PackagePath": "staticwebassets\\TwoKeyOk_files\\wow.min.js.download"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\asset-manifest.json",
+      "PackagePath": "staticwebassets\\asset-manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\api.js",
-      "PackagePath": "staticwebassets\\js\\api.js"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\logo-light (1).svg",
+      "PackagePath": "staticwebassets\\logo-light (1).svg"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\device.js",
-      "PackagePath": "staticwebassets\\js\\device.js"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\logo-light.svg",
+      "PackagePath": "staticwebassets\\logo-light.svg"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\filters.js",
-      "PackagePath": "staticwebassets\\js\\filters.js"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\logo192.png",
+      "PackagePath": "staticwebassets\\logo192.png"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\logs.js",
-      "PackagePath": "staticwebassets\\js\\logs.js"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\logo512.png",
+      "PackagePath": "staticwebassets\\logo512.png"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\main.js",
-      "PackagePath": "staticwebassets\\js\\main.js"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\manifest.json",
+      "PackagePath": "staticwebassets\\manifest.json"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\stats.js",
-      "PackagePath": "staticwebassets\\js\\stats.js"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\robots.txt",
+      "PackagePath": "staticwebassets\\robots.txt"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\tabs.js",
-      "PackagePath": "staticwebassets\\js\\tabs.js"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\css\\main.bd43d2b4.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.bd43d2b4.css"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\users.js",
-      "PackagePath": "staticwebassets\\js\\users.js"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\css\\main.bd43d2b4.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.bd43d2b4.css.map"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\js\\utils.js",
-      "PackagePath": "staticwebassets\\js\\utils.js"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\453.72cc2fe9.chunk.js",
+      "PackagePath": "staticwebassets\\static\\js\\453.72cc2fe9.chunk.js"
     },
     {
-      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\wwwroot\\styles.css",
-      "PackagePath": "staticwebassets\\styles.css"
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\453.72cc2fe9.chunk.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\453.72cc2fe9.chunk.js.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\main.35711c91.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.35711c91.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\main.35711c91.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.35711c91.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\main.35711c91.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.35711c91.js.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\main.c017837e.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.c017837e.js"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\main.c017837e.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.c017837e.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\main.c017837e.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.c017837e.js.map"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\media\\fa-brands-400.1c5c7716b05754cb4eab.woff2",
+      "PackagePath": "staticwebassets\\static\\media\\fa-brands-400.1c5c7716b05754cb4eab.woff2"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\media\\fa-regular-400.6f05ca9ab7b5345dbc07.woff2",
+      "PackagePath": "staticwebassets\\static\\media\\fa-regular-400.6f05ca9ab7b5345dbc07.woff2"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\media\\fa-solid-900.8ae0d37556ff1e685de2.woff2",
+      "PackagePath": "staticwebassets\\static\\media\\fa-solid-900.8ae0d37556ff1e685de2.woff2"
+    },
+    {
+      "Id": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\media\\fa-v4compatibility.e4340c52a50e727c6afa.woff2",
+      "PackagePath": "staticwebassets\\static\\media\\fa-v4compatibility.e4340c52a50e727c6afa.woff2"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FingerPrint.Microsoft.AspNetCore.StaticWebAssets.props",

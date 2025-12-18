@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2oqM2iyfbig=",
+  "dgSpecHash": "OnsQlm2oU8w=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lenovo\\Desktop\\Arrangement\\backend\\FingerPrint.csproj",
+  "projectFilePath": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\FingerPrint.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenovo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",

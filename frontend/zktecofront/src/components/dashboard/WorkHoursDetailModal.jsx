@@ -173,7 +173,12 @@ const WorkHoursDetailModal = ({ employee, viewType, deviceIp, settings, onClose 
             return formatDate(dateObj) === dateStr;
         });
 
-        const hoursWorked = calculateDayHours(dayLogs);
+        // For today's details prefer the server-provided TodayHours (keeps modal consistent with table)
+        const serverTodayHours = (employee && (employee.TodayHours !== undefined && employee.TodayHours !== null)) ? parseFloat(employee.TodayHours) : null;
+        const isSelectedToday = formatDate(selectedDate) === formatDate(new Date());
+        const hoursWorked = (isSelectedToday && serverTodayHours !== null && !isNaN(serverTodayHours))
+            ? serverTodayHours
+            : calculateDayHours(dayLogs);
         const requiredHours = settings.requiredDailyHours || 8;
         const remainingHours = Math.max(0, requiredHours - hoursWorked);
         const progressPercent = Math.min(100, (hoursWorked / requiredHours) * 100);

@@ -15,6 +15,12 @@ const EmployeeDetailModal = ({ employee, onClose, settings }) => {
         }
     }, [employee]);
 
+    useEffect(() => {
+        if (process.env.NODE_ENV === 'development') {
+            console.log('EmployeeDetailModal mounted', { employee, employeeData });
+        }
+    }, [employee, employeeData]);
+
     if (!employee) return null;
 
     const handleSave = () => {
@@ -24,14 +30,29 @@ const EmployeeDetailModal = ({ employee, onClose, settings }) => {
         onClose();
     };
 
-    // Calculate adjusted hours
+    // Normalize incoming employee fields (support PascalCase and camelCase from different components)
     const overtimeHours = parseFloat(employeeData.overtimeHours) || 0;
     const vacationDays = parseInt(employeeData.vacationDays) || 0;
-    const vacationHours = vacationDays * settings.requiredDailyHours;
-    const adjustedHours = employee.monthHours + overtimeHours + vacationHours;
-    const monthlyRequired = settings.requiredDailyHours * settings.workingDaysPerMonth;
-    const adjustedAchievement = monthlyRequired > 0 ? (adjustedHours / monthlyRequired) * 100 : 0;
-    const adjustedDeduction = monthlyRequired > 0 ? Math.max(0, ((monthlyRequired - adjustedHours) / monthlyRequired) * 100) : 0;
+    const vacationHours = vacationDays * (settings.requiredDailyHours || 8);
+
+    const todayHours = parseFloat(
+        employee?.TodayHours ?? employee?.todayHours ?? employee?.Today_Hours ?? 0
+    ) || 0;
+    const weeklyHours = parseFloat(
+        employee?.WeeklyHours ?? employee?.weeklyHours ?? 0
+    ) || 0;
+    const monthHours = parseFloat(
+        employee?.MonthHours ?? employee?.monthHours ?? employee?.Month_Hours ?? 0
+    ) || 0;
+
+    const monthlyRequired = parseFloat(
+        employee?.MonthlyRequired ?? employee?.monthlyRequired ?? (settings.requiredDailyHours * settings.workingDaysPerMonth)
+    ) || (settings.requiredDailyHours * settings.workingDaysPerMonth);
+
+    // If backend already provides adjustedHours/achievement/deduction prefer those values
+    const adjustedHours = parseFloat(employee?.adjustedHours ?? employee?.AdjustedHours ?? (monthHours + overtimeHours + vacationHours)) || 0;
+    const adjustedAchievement = parseFloat(employee?.adjustedAchievement ?? employee?.AdjustedAchievement ?? ((monthlyRequired > 0) ? (adjustedHours / monthlyRequired) * 100 : 0)) || 0;
+    const adjustedDeduction = parseFloat(employee?.adjustedDeduction ?? employee?.AdjustedDeduction ?? (monthlyRequired > 0 ? Math.max(0, ((monthlyRequired - adjustedHours) / monthlyRequired) * 100) : 0)) || 0;
 
     const getAchievementColor = (percent) => {
         if (percent >= 100) return '#27ae60';
@@ -69,19 +90,19 @@ const EmployeeDetailModal = ({ employee, onClose, settings }) => {
                         <div className="info-grid">
                             <div className="info-item">
                                 <span className="info-label">ساعات اليوم:</span>
-                                <span className="info-value">{employee.todayHours} ساعة</span>
+                                <span className="info-value">{todayHours.toFixed(2)} ساعة</span>
                             </div>
                             <div className="info-item">
                                 <span className="info-label">ساعات الأسبوع:</span>
-                                <span className="info-value">{employee.weeklyHours} ساعة</span>
+                                <span className="info-value">{weeklyHours.toFixed(2)} ساعة</span>
                             </div>
                             <div className="info-item">
                                 <span className="info-label">ساعات الشهر:</span>
-                                <span className="info-value">{employee.monthHours} ساعة</span>
+                                <span className="info-value">{monthHours.toFixed(2)} ساعة</span>
                             </div>
                             <div className="info-item">
                                 <span className="info-label">المطلوب شهرياً:</span>
-                                <span className="info-value">{employee.monthlyRequired} ساعة</span>
+                                <span className="info-value">{monthlyRequired.toFixed(2)} ساعة</span>
                             </div>
                         </div>
                     </div>
@@ -171,7 +192,8 @@ const EmployeeDetailModal = ({ employee, onClose, settings }) => {
                             </div>
                         </div>
                         <div className="calculation-breakdown">
-                            <p>الحساب: {employee.monthHours} (ساعات العمل) + {overtimeHours} (زمنيات) + {vacationHours.toFixed(2)} (إجازات) = {adjustedHours.toFixed(2)} ساعة</p>
+                            <p>الحساب: {monthHours.toFixed(2)} (ساعات العمل) + {overtimeHours} (زمنيات) + {vacationHours.toFixed(2)} (إجازات) = {adjustedHours.toFixed(2)} ساعة</p>
+                            <p style={{fontSize:'0.85rem',color:'#666',marginTop:'0.5rem'}}>المصدر: {employee.adjustedHours || employee.MonthHours || employee.MonthHours === 0 ? 'الخادم أو الحساب' : 'محسوب محلياً'}</p>
                         </div>
                     </div>
                 </div>

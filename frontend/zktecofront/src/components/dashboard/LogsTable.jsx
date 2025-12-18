@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { exportToExcel, tableHeaders } from '../../utils/excelExport';
+import { devices } from '../../context/DeviceContext';
 import './Dashboard.css';
 
 const LogsTable = ({ deviceIp }) => {
@@ -69,16 +70,18 @@ const LogsTable = ({ deviceIp }) => {
         }
     };
 
-const filteredLogs = logs
-    .filter(log => {
+    const filteredLogs = logs.filter(log => {
+        // First apply the search filter (case-insensitive)
         const searchLower = searchTerm.toLowerCase();
-        return (
+        const matchesSearch = !searchTerm ||
             (log.Name && log.Name.toLowerCase().includes(searchLower)) ||
-            (log.UserID && log.UserID.toLowerCase().includes(searchLower))
-        );
-    })
-    .filter(log => {
-        switch(filterType) {
+            (log.UserID && log.UserID.toLowerCase().includes(searchLower));
+
+        // If search doesn't match, exclude this log
+        if (!matchesSearch) return false;
+
+        // Then apply the filter type
+        switch (filterType) {
             case 'fingerprint':
                 // لديه بصمة فقط: لا دخول ولا خروج
                 return !log.CheckIn && !log.CheckOut;
@@ -93,19 +96,24 @@ const filteredLogs = logs
         }
     });
 
-useEffect(() => {
-    // إذا تغير البحث أو التاريخ، نعود للصفحة الأولى
-    // لكن لا نستدعي fetchLogs هنا مباشرة لمنع التكرار
-    const timer = setTimeout(() => {
-        if (page !== 1 && (searchTerm !== '' || dateFrom !== '' || dateTo !== '')) {
-            setPage(1);
-        } else {
-            fetchLogs();
-        }
-    }, 500);
+    // Effect 1: When search/filter changes, reset to page 1
+    useEffect(() => {
+        setPage(1);
+    }, [searchTerm, dateFrom, dateTo, deviceIp]);
 
-    return () => clearTimeout(timer);
-}, [searchTerm, deviceIp, dateFrom, dateTo, page]);
+    // Effect 2: When page or filters change, fetch logs
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            fetchLogs();
+        }, 300);
+
+        return () => clearTimeout(timer);
+    }, [page, searchTerm, dateFrom, dateTo, deviceIp]);
+
+    const getDeviceName = (ip) => {
+        const device = devices.find(d => d.ip === ip);
+        return device ? device.name : ip;
+    };
 
     const calculateLateMinutes = (checkInTime) => {
         if (!checkInTime || checkInTime === '-') return 0;
@@ -126,12 +134,12 @@ useEffect(() => {
         try {
             // Use the export endpoint which returns all raw logs
             const params = new URLSearchParams();
-            
+
             // If exportDeviceFilter is null, export all devices; otherwise export specific device
             if (exportDeviceFilter) {
                 params.append('deviceIp', exportDeviceFilter);
             }
-            
+
             const res = await axios.get(`/api/ZKPython/export?${params}`);
             if (res.data.success) {
                 // Map raw logs to export format with proper headers
@@ -140,7 +148,7 @@ useEffect(() => {
                     'UserID': log.UserID || '-',
                     'Name': log.Name || '-',
                     'Time': log.Time ? new Date(log.Time).toLocaleString('ar-EG') : '-',
-                    'DeviceIP': log.DeviceIP || '-',
+                    'DeviceIP': getDeviceName(log.DeviceIP) || '-',
                     'Card': log.Card || '-',
                     'Role': log.Role || '-',
                     'CheckStatus': log.CheckStatus || '-'
@@ -159,9 +167,9 @@ useEffect(() => {
                 ];
 
                 exportToExcel(
-                    exportData, 
+                    exportData,
                     headers,
-                    `سجلات_الحضور_${exportDeviceFilter ? exportDeviceFilter : 'كل_الأجهزة'}`, 
+                    `سجلات_الحضور_${exportDeviceFilter ? exportDeviceFilter : 'كل_الأجهزة'}`,
                     'سجلات الحضور'
                 );
             }
@@ -254,108 +262,108 @@ useEffect(() => {
     return (
         <div className="table-container">
             {/* Tabs */}
-<div className="tab-navigation" style={{
-    marginBottom: '1rem',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between', // التبويبين على اليسار والفلتر على اليمين
-    padding: '10px 2rem', // padding أوسع على الجانبين بدل 70px
-    flexWrap: 'wrap', // يدعم الشاشات الصغيرة
-    gap: '1rem'
-}}>
-    {/* تبويبات Logs و Weekly */}
-    <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-        <button
-            className={`tab-btn ${activeTab === 'logs' ? 'active' : ''}`}
-            onClick={() => setActiveTab('logs')}
-            style={{
-                padding: '0.75rem 1.5rem',
-                border: 'none',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                fontWeight: 'bold',
-                backgroundColor: activeTab === 'logs' ? '#00b3a8' : '#e0e0e0',
-                color: activeTab === 'logs' ? 'white' : '#333',
-                transition: 'all 0.2s'
-            }}
-        >
-            📋 سجلات الحضور
-        </button>
-        <button
-            className={`tab-btn ${activeTab === 'weekly' ? 'active' : ''}`}
-            onClick={() => setActiveTab('weekly')}
-            style={{
-                padding: '0.75rem 1.5rem',
-                border: 'none',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                fontWeight: 'bold',
-                backgroundColor: activeTab === 'weekly' ? '#00b3a8' : '#e0e0e0',
-                color: activeTab === 'weekly' ? 'white' : '#333',
-                transition: 'all 0.2s'
-            }}
-        >
-            📊 ملخص التأخير الأسبوعي
-        </button>
-    </div>
-
-    {/* زر الفلتر */}
-    <div style={{ position: 'relative' }}>
-        <span
-            style={{ cursor: "pointer", display: "inline-block" ,padding: "0 5.5rem"}}
-            onClick={() => setShowFilterPopup(prev => !prev)}
-        >
-            <i className="fa-solid fa-sliders" style={{ fontSize: 25 }}></i>
-        </span>
-
-        {showfilterpopup && (
-            <div style={{
-                position: "absolute",
-                top: "35px",
-                right: 0,
-                background: "white",
-                border: "1px solid #ccc",
-                borderRadius: "8px",
-                padding: "0.5rem",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
-                zIndex: 10,
-                minWidth: "200px",
-                fontSize: "0.9rem"
+            <div className="tab-navigation" style={{
+                marginBottom: '1rem',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between', // التبويبين على اليسار والفلتر على اليمين
+                padding: '10px 2rem', // padding أوسع على الجانبين بدل 70px
+                flexWrap: 'wrap', // يدعم الشاشات الصغيرة
+                gap: '1rem'
             }}>
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
-                    {[
-                        { key: 'all', label: 'الكل' },
-                        { key: 'fingerprint', label: 'لم يبصم' },
-                        { key: 'checkin', label: 'بصمة دخول فقط' },
-                        { key: 'checkout', label: 'بصمة خروج فقط' },
-                        { key: 'both', label: 'بصمة دخول وخروج' }
-                    ].map(filter => (
-                        <button
-                            key={filter.key}
-                            onClick={() => { setFilterType(filter.key); setShowFilterPopup(false); }}
-                            style={{
-                                display: "flex",
-                                justifyContent: "space-between",
-                                alignItems: "center",
-                                padding: "0.4rem 0.6rem",
-                                border: "none",
-                                background: filterType === filter.key ? "#00b3a8" : "white",
-                                color: filterType === filter.key ? "white" : "#333",
-                                borderRadius: "4px",
-                                cursor: "pointer",
-                                transition: "all 0.2s",
-                                textAlign: "right"
-                            }}
-                        >
-                            <span>{filter.label}</span>
-                            {filterType === filter.key && <i className="fa-solid fa-check" style={{ marginLeft: "0.5rem" }}></i>}
-                        </button>
-                    ))}
+                {/* تبويبات Logs و Weekly */}
+                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                    <button
+                        className={`tab-btn ${activeTab === 'logs' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('logs')}
+                        style={{
+                            padding: '0.75rem 1.5rem',
+                            border: 'none',
+                            borderRadius: '8px',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            backgroundColor: activeTab === 'logs' ? '#00b3a8' : '#e0e0e0',
+                            color: activeTab === 'logs' ? 'white' : '#333',
+                            transition: 'all 0.2s'
+                        }}
+                    >
+                        📋 سجلات الحضور
+                    </button>
+                    <button
+                        className={`tab-btn ${activeTab === 'weekly' ? 'active' : ''}`}
+                        onClick={() => setActiveTab('weekly')}
+                        style={{
+                            padding: '0.75rem 1.5rem',
+                            border: 'none',
+                            borderRadius: '8px',
+                            cursor: 'pointer',
+                            fontWeight: 'bold',
+                            backgroundColor: activeTab === 'weekly' ? '#00b3a8' : '#e0e0e0',
+                            color: activeTab === 'weekly' ? 'white' : '#333',
+                            transition: 'all 0.2s'
+                        }}
+                    >
+                        📊 ملخص التأخير الأسبوعي
+                    </button>
+                </div>
+
+                {/* زر الفلتر */}
+                <div style={{ position: 'relative' }}>
+                    <span
+                        style={{ cursor: "pointer", display: "inline-block", padding: "0 5.5rem" }}
+                        onClick={() => setShowFilterPopup(prev => !prev)}
+                    >
+                        <i className="fa-solid fa-sliders" style={{ fontSize: 25 }}></i>
+                    </span>
+
+                    {showfilterpopup && (
+                        <div style={{
+                            position: "absolute",
+                            top: "35px",
+                            right: 0,
+                            background: "white",
+                            border: "1px solid #ccc",
+                            borderRadius: "8px",
+                            padding: "0.5rem",
+                            boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+                            zIndex: 10,
+                            minWidth: "200px",
+                            fontSize: "0.9rem"
+                        }}>
+                            <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+                                {[
+                                    { key: 'all', label: 'الكل' },
+                                    { key: 'fingerprint', label: 'لم يبصم' },
+                                    { key: 'checkin', label: 'بصمة دخول فقط' },
+                                    { key: 'checkout', label: 'بصمة خروج فقط' },
+                                    { key: 'both', label: 'بصمة دخول وخروج' }
+                                ].map(filter => (
+                                    <button
+                                        key={filter.key}
+                                        onClick={() => { setFilterType(filter.key); setShowFilterPopup(false); }}
+                                        style={{
+                                            display: "flex",
+                                            justifyContent: "space-between",
+                                            alignItems: "center",
+                                            padding: "0.4rem 0.6rem",
+                                            border: "none",
+                                            background: filterType === filter.key ? "#00b3a8" : "white",
+                                            color: filterType === filter.key ? "white" : "#333",
+                                            borderRadius: "4px",
+                                            cursor: "pointer",
+                                            transition: "all 0.2s",
+                                            textAlign: "right"
+                                        }}
+                                    >
+                                        <span>{filter.label}</span>
+                                        {filterType === filter.key && <i className="fa-solid fa-check" style={{ marginLeft: "0.5rem" }}></i>}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
-        )}
-    </div>
-</div>
 
 
             {/* Logs Tab Content */}

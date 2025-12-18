@@ -1,8 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using FingerPrint.Data;
 using FingerPrint.BackgroundService;
-using System.Text.Json;
-using Microsoft.AspNetCore.Mvc;
 using FingerPrint.Services;
 using FingerPrint.Repositories;
 using FingerPrint.Interfaces;
@@ -10,36 +8,41 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Enable legacy timestamp behavior for PostgreSQL to handle DateTime.Now/Local
+// Enable legacy timestamp behavior for PostgreSQL
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
+// Add Controllers with JSON options
 builder.Services.AddControllers();
 builder.Services.Configure<Microsoft.AspNetCore.Mvc.JsonOptions>(options =>
 {
     options.JsonSerializerOptions.PropertyNamingPolicy = null; // Use PascalCase
 });
-builder.Services.Configure<FingerPrint.Configuration.JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+
+// JWT Settings
+builder.Services.Configure<FingerPrint.Configuration.JwtSettings>(
+    builder.Configuration.GetSection("JwtSettings")
+);
+var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<FingerPrint.Configuration.JwtSettings>();
+
+// Dependency Injection
 builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
-builder.Services.AddScoped<ITokenService, TokenService>();
-
 builder.Services.AddScoped<PythonService>();
 builder.Services.AddHostedService<FPBackgroundService>();
 builder.Services.AddHostedService<FingerPrint.Services.TokenCleanupService>();
 
-// Database Context
+// Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
+);
 
 // Authentication
-var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<FingerPrint.Configuration.JwtSettings>();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -47,8 +50,19 @@ builder.Services.AddAuthentication(options =>
 })
 .AddJwtBearer(options =>
 {
-    options.RequireHttpsMetadata = false; // Set to true in production
+    options.RequireHttpsMetadata = false; // Development only
     options.SaveToken = true;
+    options.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
+        {
+            if (context.Request.Cookies.ContainsKey("accessToken"))
+            {
+                context.Token = context.Request.Cookies["accessToken"];
+            }
+            return Task.CompletedTask;
+        }
+    };
     options.TokenValidationParameters = new TokenValidationParameters
     {
         ValidateIssuer = true,
@@ -66,63 +80,76 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    c.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
         Title = "FingerPrint API",
         Description = "API for FingerPrint System"
     });
-    
-    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
-        Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+        Type = SecuritySchemeType.Http,
         Scheme = "Bearer",
         BearerFormat = "JWT",
-        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
-        Description = "أدخل JWT Bearer token هنا"
+        In = ParameterLocation.Header,
+        Description = "Enter JWT Bearer token"
     });
 
-    c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
     {
         {
-            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            new OpenApiSecurityScheme
             {
-                Reference = new Microsoft.OpenApi.Models.OpenApiReference
-                {
-                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
-                    Id = "Bearer"
-                }
+                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
             },
             Array.Empty<string>()
         }
     });
 });
 
-// CORS
+// CORS - Updated to allow any origin for testing
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.AddPolicy("DevCorsPolicy", policy =>
     {
-        policy.AllowAnyOrigin()
+        policy.SetIsOriginAllowed(origin => true)  // Allow any origin with credentials
+              .AllowAnyHeader()
               .AllowAnyMethod()
-              .AllowAnyHeader();
+              .AllowCredentials();
     });
 });
 
 var app = builder.Build();
 
-// Apply database migration automatically
+// Database Migration / Auto Schema Updates
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    db.Database.EnsureCreated();
-    try {
-        db.Database.ExecuteSqlRaw("ALTER TABLE \"AttendanceLogs\" ADD COLUMN IF NOT EXISTS \"CheckStatus\" text;");
-    } catch {}
+    try
+    {
+        db.Database.Migrate();
+    }
+    catch (Npgsql.PostgresException ex) when (ex.SqlState == "42501")
+    {
+        // Log the permission error but don't crash
+        Console.WriteLine("Warning: Cannot run migrations due to insufficient database permissions.");
+        Console.WriteLine("Please ensure the database user has appropriate permissions.");
+        // Consider: throw; // if migrations are critical
+    }
 }
 
 // Middleware pipeline
+app.UseCors("DevCorsPolicy"); // Must be before Authentication/Authorization
+
+// Disable HTTPS redirection since we're running on HTTP only
+// app.UseHttpsRedirection(); // Commented out for HTTP-only deployment
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+// Swagger only in Development
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -132,10 +159,10 @@ if (app.Environment.IsDevelopment())
         c.RoutePrefix = string.Empty;
     });
 }
+app.UseDefaultFiles(); // index.html
+app.UseStaticFiles();  // React build files
 
-app.UseCors("AllowAll");
-app.UseHttpsRedirection();
-app.UseAuthentication();
-app.UseAuthorization();
 app.MapControllers();
+app.MapFallbackToFile("index.html");
+
 app.Run();

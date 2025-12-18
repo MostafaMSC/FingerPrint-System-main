@@ -103,7 +103,7 @@ namespace FingerPrint.BackgroundService
 
                 try
                 {
-                    await Task.Delay(TimeSpan.FromMinutes(0.1), stoppingToken);
+                    await Task.Delay(TimeSpan.FromMinutes(5), stoppingToken);
                 }
                 catch (OperationCanceledException)
                 {

@@ -2,7 +2,7 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const DeviceContext = createContext();
 
-const devices = [
+export const devices = [
     { name: 'Head Quarter', ip: '172.16.1.40' },
     { name: 'Dawoodi-Data Center', ip: '192.168.150.233' },
     { name: 'Customer Center', ip: '10.4.44.15' },

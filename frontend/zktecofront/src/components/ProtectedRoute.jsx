@@ -3,9 +3,19 @@ import { Navigate } from 'react-router-dom';
 import apiService from '../utils/api';
 
 const ProtectedRoute = ({ children }) => {
-    const isAuthenticated = apiService.isAuthenticated();
-    console.log('ProtectedRoute check - isAuthenticated:', isAuthenticated);
-    console.log('Stored accessToken:', localStorage.getItem('accessToken') ? 'EXISTS' : 'NOT FOUND');
+    const [isAuthenticated, setIsAuthenticated] = React.useState(null);
+
+    React.useEffect(() => {
+        const checkAuth = async () => {
+            const auth = await apiService.isAuthenticated();
+            setIsAuthenticated(auth);
+        };
+        checkAuth();
+    }, []);
+
+    if (isAuthenticated === null) {
+        return <div>Loading...</div>; // Or a proper spinner
+    }
 
     if (!isAuthenticated) {
         console.log('User not authenticated, redirecting to /login');

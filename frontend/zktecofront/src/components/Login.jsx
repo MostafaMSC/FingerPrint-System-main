@@ -20,15 +20,9 @@ const Login = () => {
             const response = await apiService.login(username, password);
             console.log('Login response:', response);
 
-            // The backend returns PascalCase properties (e.g. AccessToken) because PropertyNamingPolicy is null
-            const token = response.AccessToken || response.accessToken;
-            if (token) {
-                localStorage.setItem('accessToken', token);
-                console.log('Token successfully stored:', token);
-                navigate('/dashboard'); // no need for setTimeout
-            } else {
-                setError('Login failed: no access token received.');
-            }
+            // Response does not contain token anymore, just success
+            console.log('Login successful');
+            navigate('/dashboard');
         } catch (err) {
             console.error('Login error:', err);
             setError(err.message || 'Login failed. Please check your credentials.');
@@ -47,13 +41,13 @@ const Login = () => {
 
             <div className="auth-card">
                 <div className="auth-header">
-                   <div className="auth-logo">
-                    <img style={{ width: '200px', height: '60px', backgroundColor: '#0c315d', borderRadius: '8px', padding: '0.2rem' }}
-                        src="./logo-light.svg" // **غَيِّر هذا المسار**
-                        alt="Company Logo"
-                        className="dashboard-logo"
+                    <div className="auth-logo">
+                        <img style={{ width: '200px', height: '60px', backgroundColor: '#0c315d', borderRadius: '8px', padding: '0.2rem' }}
+                            src="./logo-light.svg" // **غَيِّر هذا المسار**
+                            alt="Company Logo"
+                            className="dashboard-logo"
 
-                    />
+                        />
 
                     </div>
                     <h1>تسجيل الدخول</h1>
@@ -114,7 +108,7 @@ const Login = () => {
                         {loading ? (
                             <>
                                 <span className="spinner"></span>
-                               يتم التسجيل...
+                                يتم التسجيل...
                             </>
                         ) : (
                             <>

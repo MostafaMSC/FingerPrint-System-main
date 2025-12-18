@@ -18,7 +18,7 @@ public class ZKPythonController : ControllerBase
         _pythonService = pythonService ?? throw new ArgumentNullException(nameof(pythonService));
     }
 
-    [HttpGet("get-logs")]
+    [HttpGet("logs")]
     public async Task<IActionResult> GetLogs([FromQuery] int page = 1, [FromQuery] int pageSize = 100, [FromQuery] string deviceIp = null)
     {
         if (page <= 0) page = 1;
@@ -169,8 +169,9 @@ public class ZKPythonController : ControllerBase
     {
         if (string.IsNullOrWhiteSpace(name)) return BadRequest(new { success = false, message = "name is required" });
 
+        var searchLower = name.ToLower();
         var results = await _context.AttendanceLogs
-            .Where(l => l.Name.Contains(name))
+            .Where(l => l.Name.ToLower().Contains(searchLower))
             .OrderByDescending(l => l.Time)
             .ToListAsync();
 
@@ -754,7 +755,8 @@ public class ZKPythonController : ControllerBase
 
         if (!string.IsNullOrWhiteSpace(search))
         {
-            query = query.Where(x => x.Name.Contains(search) || x.UserID.Contains(search));
+            var searchLower = search.ToLower();
+            query = query.Where(x => x.Name.ToLower().Contains(searchLower) || x.UserID.ToLower().Contains(searchLower));
         }
 
         if (DateTime.TryParse(dateFrom, out DateTime dtFrom))
