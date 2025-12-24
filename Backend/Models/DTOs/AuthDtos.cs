@@ -6,6 +6,7 @@ public record LoginRequest(string Username, string Password);
 
 public record RegisterRequest(
     string Username,
+    string Email,
     string Password,
     string DeviceIp = null,
     string Department = null,
@@ -16,7 +17,9 @@ public record RegisterRequest(
 public record AuthResponse(
     string AccessToken,
     string RefreshToken,
-    DateTime ExpiresAt
+    DateTime? ExpiresAt,
+    bool Requires2FA = false,
+    int? UserId = null
 );
 
 public record RefreshTokenRequest(string RefreshToken);
@@ -26,3 +29,9 @@ public record TokenValidationResult(
     string? Error = null,
     int? UserId = null
 );
+public class VerifyOtpRequest
+{
+    public int UserId { get; set; }
+    public string Otp { get; set; }
+}
+

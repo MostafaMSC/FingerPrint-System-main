@@ -211,7 +211,7 @@ const WorkHoursTable = ({ deviceIp }) => {
     };
 
 
-    const handleExport = () => {
+    const handleExportFiltered = () => {
         // Format data for export with correct keys matching tableHeaders.workHours
         const exportData = filteredWorkHours.map((user, index) => ({
             '#': index + 1,
@@ -224,7 +224,23 @@ const WorkHoursTable = ({ deviceIp }) => {
             'adjustedAchievement': `${user.adjustedAchievement.toFixed(2)}%`,
             'adjustedDeduction': `${user.adjustedDeduction.toFixed(2)}%`
         }));
-        exportToExcel(exportData, tableHeaders.workHours, 'ساعات_العمل', 'ساعات العمل');
+        exportToExcel(exportData, tableHeaders.workHours, 'ساعات_العمل_المفلترة', 'ساعات العمل المفلترة');
+    };
+
+    const handleExportAll = () => {
+        // Export all work hours data
+        const exportData = workHours.map((user, index) => ({
+            '#': index + 1,
+            'userID': user.userID || user.UserID || '-',
+            'name': user.name || user.Name || '-',
+            'todayHours': `${user.TodayHours} ساعة`,
+            'weeklyHours': `${user.WeeklyHours} ساعة`,
+            'adjustedHours': `${user.adjustedHours.toFixed(2)} ساعة`,
+            'monthlyRequired': `${user.MonthlyRequired} ساعة`,
+            'adjustedAchievement': `${user.adjustedAchievement.toFixed(2)}%`,
+            'adjustedDeduction': `${user.adjustedDeduction.toFixed(2)}%`
+        }));
+        exportToExcel(exportData, tableHeaders.workHours, 'ساعات_العمل_الكاملة', 'ساعات العمل الكاملة');
     };
 
     return (
@@ -242,14 +258,30 @@ const WorkHoursTable = ({ deviceIp }) => {
                             className="search-input"
                         />
                     </div>
-                    <button
-                        className="btn-export"
-                        onClick={handleExport}
-                        disabled={filteredWorkHours.length === 0}
-                        title="تصدير إلى Excel"
-                    >
-                        📥 تصدير Excel
-                    </button>
+                    <div style={{ display: 'flex', gap: '10px' }}>
+                        <button
+                            className="btn-export"
+                            onClick={handleExportAll}
+                            disabled={workHours.length === 0}
+                            title={`تصدير كل البيانات (${workHours.length})`}
+                            style={{ backgroundColor: '#3498db' }}
+                        >
+                            📥 تصدير الكل ({workHours.length})
+                        </button>
+                        <button
+                            className="btn-export"
+                            onClick={handleExportFiltered}
+                            disabled={filteredWorkHours.length === 0}
+                            title={`تصدير ${filteredWorkHours.length} سجل مفلتر`}
+                            style={{
+                                opacity: filteredWorkHours.length === 0 ? 0.5 : 1,
+                                cursor: filteredWorkHours.length === 0 ? 'not-allowed' : 'pointer',
+                                backgroundColor: '#27ae60'
+                            }}
+                        >
+                            📊 تصدير المفلتر ({filteredWorkHours.length})
+                        </button>
+                    </div>
                 </div>
             </div>
             {loading ? (

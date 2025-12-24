@@ -19,6 +19,7 @@ const LogsTable = ({ deviceIp }) => {
     const [pageSize] = useState(20);
     const [totalPages, setTotalPages] = useState(1);
     const [totalRecords, setTotalRecords] = useState(0);
+    const [totalFilteredRecords, setTotalFilteredRecords] = useState(0);
     const [exportDeviceFilter, setExportDeviceFilter] = useState(null);
     const [filterType, setFilterType] = useState('all');
     const [showfilterpopup, setShowFilterPopup] = useState(false);
@@ -130,7 +131,79 @@ const LogsTable = ({ deviceIp }) => {
         }
     };
 
-    const handleExportLogs = async () => {
+    const handleExportFiltered = async () => {
+        try {
+            // Fetch all filtered logs from the backend (without pagination)
+            const params = new URLSearchParams({
+                deviceIp: deviceIp || '',
+                search: searchTerm || '',
+                dateFrom: dateFrom || '',
+                dateTo: dateTo || ''
+            });
+
+            const res = await axios.get(`/api/ZKPython/export-attendance-filtered?${params}`);
+            
+            if (!res.data.success || !res.data.data || res.data.data.length === 0) {
+                alert('لا توجد بيانات للتصدير');
+                return;
+            }
+
+            // Update total filtered records
+            setTotalFilteredRecords(res.data.data.length);
+
+            // Map filtered logs to export format with proper headers
+            const exportData = res.data.data.map((log, index) => {
+                const lateMins = calculateLateMinutes(log.CheckIn);
+                return {
+                    '#': index + 1,
+                    'UserID': log.UserID || '-',
+                    'Name': log.Name || '-',
+                    'Date': log.Date || '-',
+                    'CheckIn': log.CheckIn || '-',
+                    'CheckOut': log.CheckOut || '-',
+                    'LateMinutes': lateMins > 0 ? formatMinutes(lateMins) : '-'
+                };
+            });
+
+            // Create headers array for the export function
+            const headers = [
+                { key: '#', title: '#' },
+                { key: 'UserID', title: 'معرف المستخدم' },
+                { key: 'Name', title: 'الاسم' },
+                { key: 'Date', title: 'التاريخ' },
+                { key: 'CheckIn', title: 'الدخول' },
+                { key: 'CheckOut', title: 'الخروج' },
+                { key: 'LateMinutes', title: 'التأخير' }
+            ];
+
+            // Create filename with filter info
+            let filterInfo = '';
+            if (searchTerm) filterInfo += `_بحث_${searchTerm}`;
+            if (dateFrom) filterInfo += `_من_${dateFrom}`;
+            if (dateTo) filterInfo += `_إلى_${dateTo}`;
+            if (filterType !== 'all') {
+                const filterNames = {
+                    'fingerprint': 'لم_يبصم',
+                    'checkin': 'دخول_فقط',
+                    'checkout': 'خروج_فقط',
+                    'both': 'دخول_وخروج'
+                };
+                filterInfo += `_${filterNames[filterType]}`;
+            }
+
+            exportToExcel(
+                exportData,
+                headers,
+                `سجلات_الحضور_المفلترة${filterInfo}`,
+                'سجلات الحضور المفلترة'
+            );
+        } catch (error) {
+            console.error("Export failed", error);
+            alert('فشل التصدير. حاول مرة أخرى.');
+        }
+    };
+
+    const handleExportAll = async () => {
         try {
             // Use the export endpoint which returns all raw logs
             const params = new URLSearchParams();
@@ -169,12 +242,13 @@ const LogsTable = ({ deviceIp }) => {
                 exportToExcel(
                     exportData,
                     headers,
-                    `سجلات_الحضور_${exportDeviceFilter ? exportDeviceFilter : 'كل_الأجهزة'}`,
-                    'سجلات الحضور'
+                    `سجلات_الحضور_الكاملة_${exportDeviceFilter ? exportDeviceFilter : 'كل_الأجهزة'}`,
+                    'سجلات الحضور الكاملة'
                 );
             }
         } catch (error) {
             console.error("Export failed", error);
+            alert('فشل التصدير. حاول مرة أخرى.');
         }
     };
 
@@ -400,7 +474,7 @@ const LogsTable = ({ deviceIp }) => {
                             </div>
 
                             <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                                {loadingLogs ? 'جاري التحميل...' : `العدد الكلي: ${totalRecords}`}
+                                {loadingLogs ? 'جاري التحميل...' : `إجمالي: ${totalRecords} | المعروض: ${filteredLogs.length}`}
                             </span>
                             <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                                 <select
@@ -408,17 +482,31 @@ const LogsTable = ({ deviceIp }) => {
                                     onChange={(e) => setExportDeviceFilter(e.target.value || null)}
                                     className="search-input"
                                     style={{ width: 'auto' }}
-                                    title="اختر جهاز للتصدير أو اختر الكل"
+                                    title="اختر جهاز للتصدير الكامل أو اختر الكل"
                                 >
                                     <option value="">📱 كل الأجهزة</option>
                                     <option value={deviceIp}>{deviceIp}</option>
                                 </select>
                                 <button
                                     className="btn-export"
-                                    onClick={handleExportLogs}
-                                    title="تصدير الكل إلى Excel"
+                                    onClick={handleExportAll}
+                                    title="تصدير كل البيانات من الخادم"
+                                    style={{ backgroundColor: '#3498db' }}
                                 >
-                                    📥 تصدير Excel
+                                    📥 تصدير الكل
+                                </button>
+                                <button
+                                    className="btn-export"
+                                    onClick={handleExportFiltered}
+                                    disabled={filteredLogs.length === 0}
+                                    title={`تصدير ${filteredLogs.length} سجل مفلتر`}
+                                    style={{
+                                        opacity: filteredLogs.length === 0 ? 0.5 : 1,
+                                        cursor: filteredLogs.length === 0 ? 'not-allowed' : 'pointer',
+                                        backgroundColor: '#27ae60'
+                                    }}
+                                >
+                                    📊 تصدير المفلتر 
                                 </button>
                             </div>
                         </div>

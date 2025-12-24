@@ -64,20 +64,42 @@ public async Task<IActionResult> Register([FromBody] RegisterRequest request, Ca
         {
             try
             {
+                _logger.LogInformation("Login attempt for username: {Username}", request.Username);
+                
                 var response = await _authService.LoginAsync(request, cancellationToken);
-                SetTokenCookie(response.AccessToken, response.RefreshToken);
-                return Ok(new { message = "Login successful" });
+                
+                if (!response.Requires2FA)
+                {
+                    SetTokenCookie(response.AccessToken, response.RefreshToken);
+                }
+
+                _logger.LogInformation("Login successful for username: {Username}", request.Username);
+                return Ok(response);
             }
             catch (UnauthorizedAccessException ex)
             {
+                _logger.LogWarning("Login failed for username: {Username}. Reason: {Message}", request.Username, ex.Message);
                 return Unauthorized(new { message = ex.Message });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error during login");
-                return StatusCode(500, new { message = "An error occurred during login" });
+                _logger.LogError(ex, "Error during login for username: {Username}", request.Username);
+                return StatusCode(500, new { message = ex.Message + " | " + ex.StackTrace });
             }
         }
+
+        [HttpPost("verify-otp")]
+            public async Task<IActionResult> VerifyOtp([FromBody] VerifyOtpRequest request)
+            {
+                var response = await _authService.VerifyOtpAsync(
+                    request.UserId,
+                    request.Otp
+                );
+
+                SetTokenCookie(response.AccessToken, response.RefreshToken);
+
+                return Ok(response);
+            }
 
         [HttpPost("refresh")]
         [ProducesResponseType(typeof(AuthResponse), StatusCodes.Status200OK)]
@@ -170,7 +192,7 @@ public async Task<IActionResult> Register([FromBody] RegisterRequest request, Ca
                 HttpOnly = true,
                 Secure = Request.IsHttps,
                 SameSite = SameSiteMode.Lax,
-                Expires = DateTime.UtcNow.AddMinutes(90) // Match access token lifetime
+                Expires = DateTime.UtcNow.AddDays(30) // Extended for persistent sessions
             };
             Response.Cookies.Append("accessToken", token, cookieOptions);
 
@@ -179,9 +201,82 @@ public async Task<IActionResult> Register([FromBody] RegisterRequest request, Ca
                 HttpOnly = true,
                 Secure = Request.IsHttps,
                 SameSite = SameSiteMode.Lax,
-                Expires = DateTime.UtcNow.AddDays(7) // Match refresh token lifetime
+                Expires = DateTime.UtcNow.AddDays(30) // Extended for persistent sessions
             };
             Response.Cookies.Append("refreshToken", refreshToken, refreshCookieOptions);
         }
+        // Add these new endpoints to your existing AuthController.cs
+
+[Authorize]
+[HttpPost("enable-2fa")]
+[ProducesResponseType(StatusCodes.Status200OK)]
+[ProducesResponseType(StatusCodes.Status401Unauthorized)]
+public async Task<IActionResult> Enable2FA(CancellationToken cancellationToken)
+{
+    try
+    {
+        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized(new { message = "Invalid user ID in token" });
+        }
+
+        await _authService.Enable2FAAsync(userId, cancellationToken);
+        return Ok(new { message = "2FA enabled successfully" });
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex, "Error enabling 2FA");
+        return StatusCode(500, new { message = "An error occurred while enabling 2FA" });
+    }
+}
+
+[Authorize]
+[HttpPost("disable-2fa")]
+[ProducesResponseType(StatusCodes.Status200OK)]
+[ProducesResponseType(StatusCodes.Status401Unauthorized)]
+public async Task<IActionResult> Disable2FA(CancellationToken cancellationToken)
+{
+    try
+    {
+        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized(new { message = "Invalid user ID in token" });
+        }
+
+        await _authService.Disable2FAAsync(userId, cancellationToken);
+        return Ok(new { message = "2FA disabled successfully" });
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex, "Error disabling 2FA");
+        return StatusCode(500, new { message = "An error occurred while disabling 2FA" });
+    }
+}
+
+[Authorize]
+[HttpGet("2fa-status")]
+[ProducesResponseType(typeof(object), StatusCodes.Status200OK)]
+[ProducesResponseType(StatusCodes.Status401Unauthorized)]
+public async Task<IActionResult> Get2FAStatus(CancellationToken cancellationToken)
+{
+    try
+    {
+        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        if (string.IsNullOrEmpty(userIdClaim) || !int.TryParse(userIdClaim, out int userId))
+        {
+            return Unauthorized(new { message = "Invalid user ID in token" });
+        }
+
+        var status = await _authService.Get2FAStatusAsync(userId, cancellationToken);
+        return Ok(new { twoFactorEnabled = status });
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError(ex, "Error getting 2FA status");
+        return StatusCode(500, new { message = "An error occurred while checking 2FA status" });
+    }
+}
     }
 }

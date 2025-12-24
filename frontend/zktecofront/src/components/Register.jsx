@@ -5,6 +5,7 @@ import './Auth.css';
 
 const Register = () => {
     const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [error, setError] = useState('');
@@ -42,6 +43,7 @@ const Register = () => {
             console.log('Registering user:', username);
             const response = await apiService.register({
                 username,
+                email,
                 password,
                 deviceIp: deviceIp || undefined,
                 department: department || undefined,
@@ -71,13 +73,13 @@ const Register = () => {
             <div className="auth-card">
                 <div className="auth-header">
                     <div className="auth-logo">
-                    <img style={{ width: '200px', height: '60px', backgroundColor: '#0c315d', borderRadius: '8px', padding: '0.2rem' }}
-                        src="./logo-light.svg" // **غَيِّر هذا المسار**
-                        alt="Company Logo"
-                        className="dashboard-logo"
+                        <img style={{ width: '200px', height: '60px', backgroundColor: '#0c315d', borderRadius: '8px', padding: '0.2rem' }}
+                            src="./logo-light.svg" // **غَيِّر هذا المسار**
+                            alt="Company Logo"
+                            className="dashboard-logo"
 
-                    />
-                    {/* <span style={{ color: '#0c315d' }}>TWOKEYOK</span> */}
+                        />
+                        {/* <span style={{ color: '#0c315d' }}>TWOKEYOK</span> */}
 
                     </div>
                     <h1>أنشاء حساب</h1>
@@ -111,6 +113,25 @@ const Register = () => {
                                 placeholder="ادخل اسم المستخدم"
                                 required
                                 autoComplete="username"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="email">البريد الالكتروني</label>
+                        <div className="input-wrapper">
+                            <svg className="input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M22 6L12 13L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                            <input
+                                type="email"
+                                id="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="ادخل البريد الالكتروني"
+                                required
+                                autoComplete="email"
                             />
                         </div>
                     </div>

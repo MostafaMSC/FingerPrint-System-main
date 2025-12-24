@@ -84,6 +84,10 @@ namespace FingerPrint.Migrations
                     b.Property<string>("DeviceUserID")
                         .HasColumnType("text");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("text");
@@ -93,6 +97,18 @@ namespace FingerPrint.Migrations
 
                     b.Property<string>("Section")
                         .HasColumnType("text");
+
+                    b.Property<string>("TwoFactorCodeHash")
+                        .HasColumnType("text");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateTime?>("TwoFactorExpiry")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<int>("TwoFactorFailedAttempts")
+                        .HasColumnType("integer");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp without time zone");

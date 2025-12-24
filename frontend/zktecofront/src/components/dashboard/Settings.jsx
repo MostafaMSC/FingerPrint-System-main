@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import apiService from '../../utils/api';
 import './Settings.css';
 
 function Settings() {
@@ -11,7 +12,10 @@ function Settings() {
         allowedVacationDays: 2
     });
 
+    const [twoFactorEnabled, setTwoFactorEnabled] = useState(false);
+    const [loading2FA, setLoading2FA] = useState(false);
     const [saved, setSaved] = useState(false);
+    const [message, setMessage] = useState({ type: '', text: '' });
 
     // Load settings from localStorage on mount
     useEffect(() => {
@@ -27,7 +31,44 @@ function Settings() {
                 allowedVacationDays: parsed.allowedVacationDays || 2
             });
         }
+
+        // Load 2FA status
+        load2FAStatus();
     }, []);
+
+    const load2FAStatus = async () => {
+        try {
+            const response = await apiService.get2FAStatus();
+            // Handle both camelCase and PascalCase
+            const enabled = response.twoFactorEnabled || response.TwoFactorEnabled || false;
+            setTwoFactorEnabled(enabled);
+            console.log('2FA Status loaded:', enabled);
+        } catch (error) {
+            console.error('Error loading 2FA status:', error);
+        }
+    };
+
+    const handle2FAToggle = async () => {
+        setLoading2FA(true);
+        setMessage({ type: '', text: '' });
+
+        try {
+            if (twoFactorEnabled) {
+                await apiService.disable2FA();
+                setTwoFactorEnabled(false);
+                setMessage({ type: 'success', text: 'تم تعطيل المصادقة الثنائية بنجاح' });
+            } else {
+                await apiService.enable2FA();
+                setTwoFactorEnabled(true);
+                setMessage({ type: 'success', text: 'تم تفعيل المصادقة الثنائية بنجاح. سيتم إرسال رمز التحقق إلى بريدك الإلكتروني عند تسجيل الدخول.' });
+            }
+        } catch (error) {
+            setMessage({ type: 'error', text: error.message || 'حدث خطأ أثناء تحديث إعدادات المصادقة الثنائية' });
+        } finally {
+            setLoading2FA(false);
+            setTimeout(() => setMessage({ type: '', text: '' }), 5000);
+        }
+    };
 
     // Auto-calculate required daily hours when start/end times change
     const calculateDailyHours = useCallback(() => {
@@ -73,8 +114,43 @@ function Settings() {
 
     return (
         <div className="settings-container">
-            <h2>إعدادات ساعات العمل</h2>
+            <h2>إعدادات النظام</h2>
 
+            {/* 2FA Section */}
+            <div className="settings-section">
+                <h3>إعدادات الأمان</h3>
+                <div className="settings-grid">
+                    <div className="setting-item" style={{ gridColumn: '1 / -1' }}>
+                        <label htmlFor="twoFactor">المصادقة الثنائية (2FA):</label>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                            <button
+                                onClick={handle2FAToggle}
+                                disabled={loading2FA}
+                                className={`toggle-button ${twoFactorEnabled ? 'enabled' : 'disabled'}`}
+                                style={{
+                                    padding: '0.5rem 1.5rem',
+                                    borderRadius: '8px',
+                                    border: 'none',
+                                    cursor: loading2FA ? 'not-allowed' : 'pointer',
+                                    backgroundColor: twoFactorEnabled ? '#10b981' : '#6b7280',
+                                    color: 'white',
+                                    fontWeight: 'bold',
+                                    transition: 'all 0.3s ease'
+                                }}
+                            >
+                                {loading2FA ? 'جاري التحديث...' : (twoFactorEnabled ? 'مفعل ✓' : 'معطل ✗')}
+                            </button>
+                            <small style={{ color: '#666', fontSize: '13px' }}>
+                                {twoFactorEnabled 
+                                    ? 'سيتم إرسال رمز التحقق إلى بريدك الإلكتروني عند تسجيل الدخول'
+                                    : 'قم بتفعيل المصادقة الثنائية لحماية حسابك'}
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Work Settings Section */}
             <div className="settings-section">
                 <h3>أوقات العمل</h3>
                 <div className="settings-grid">
@@ -184,6 +260,19 @@ function Settings() {
             {saved && (
                 <div className="success-message">
                     تم حفظ الإعدادات بنجاح! سيتم تطبيقها على كل النظام.
+                </div>
+            )}
+
+            {message.text && (
+                <div className={`message-alert ${message.type}`} style={{
+                    marginTop: '1rem',
+                    padding: '1rem',
+                    borderRadius: '8px',
+                    backgroundColor: message.type === 'success' ? '#d1fae5' : '#fee2e2',
+                    color: message.type === 'success' ? '#065f46' : '#991b1b',
+                    border: `1px solid ${message.type === 'success' ? '#10b981' : '#ef4444'}`
+                }}>
+                    {message.text}
                 </div>
             )}
         </div>

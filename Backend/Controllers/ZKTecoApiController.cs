@@ -808,4 +808,68 @@ public class ZKPythonController : ControllerBase
             data = result 
         });
     }
+
+    // 15️⃣ تصدير جميع سجلات الحضور المفلترة (بدون تقسيم صفحات)
+    [HttpGet("export-attendance-filtered")]
+    public async Task<IActionResult> ExportAttendanceFiltered(
+        [FromQuery] string deviceIp = null,
+        [FromQuery] string dateFrom = null,
+        [FromQuery] string dateTo = null,
+        [FromQuery] string search = null)
+    {
+        var query = _context.AttendanceLogs.AsQueryable();
+
+        if (!string.IsNullOrEmpty(deviceIp))
+        {
+            query = query.Where(x => x.DeviceIP == deviceIp);
+        }
+
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            var searchLower = search.ToLower();
+            query = query.Where(x => x.Name.ToLower().Contains(searchLower) || x.UserID.ToLower().Contains(searchLower));
+        }
+
+        if (DateTime.TryParse(dateFrom, out DateTime dtFrom))
+        {
+            query = query.Where(x => x.Time.Date >= dtFrom.Date);
+        }
+
+        if (DateTime.TryParse(dateTo, out DateTime dtTo))
+        {
+            query = query.Where(x => x.Time.Date <= dtTo.Date);
+        }
+
+        var groupedQuery = query
+            .GroupBy(l => new { l.UserID, l.Name, Date = l.Time.Date })
+            .Select(g => new 
+            {
+                UserID = g.Key.UserID,
+                Name = g.Key.Name,
+                Date = g.Key.Date,
+                CheckIn = g.Min(x => x.Time),
+                CheckOut = g.Max(x => x.Time)
+            });
+
+        var allData = await groupedQuery
+            .OrderByDescending(x => x.Date)
+            .ThenBy(x => x.Name)
+            .ToListAsync();
+
+        var result = allData.Select(x => new 
+        {
+            x.UserID,
+            x.Name,
+            Date = x.Date.ToString("yyyy-MM-dd"),
+            CheckIn = x.CheckIn.ToString("HH:mm:ss"),
+            CheckOut = (x.CheckIn == x.CheckOut || (x.CheckOut - x.CheckIn).TotalMinutes < 60) ? null : x.CheckOut.ToString("HH:mm:ss")
+        });
+
+        return Ok(new 
+        { 
+            success = true, 
+            total = result.Count(),
+            data = result 
+        });
+    }
 }

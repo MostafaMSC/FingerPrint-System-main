@@ -8,16 +8,19 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using FingerPrint.Data;
 using FingerPrint.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FingerPrint.BackgroundService
 {
     public class FPBackgroundService : Microsoft.Extensions.Hosting.BackgroundService
     {
         private readonly IServiceScopeFactory _scopeFactory;
+        private readonly Microsoft.Extensions.Logging.ILogger<FPBackgroundService> _logger;
 
-        public FPBackgroundService(IServiceScopeFactory scopeFactory)
+        public FPBackgroundService(IServiceScopeFactory scopeFactory, Microsoft.Extensions.Logging.ILogger<FPBackgroundService> logger)
         {
             _scopeFactory = scopeFactory;
+            _logger = logger;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -58,21 +61,17 @@ namespace FingerPrint.BackgroundService
 
                                 string checkStatus = log["CheckStatus"]?.ToString();
 
-                                // Check for duplicates: 
-                                // 1. Exact match (already imported)
-                                // 2. Same user, same status, within 2 minutes (duplicate punch)
-                                bool exists = db.AttendanceLogs.Any(x => 
-                                    x.UserID == userId && 
-                                    (
-                                        x.Time == logTime || 
-                                        (
-                                            !string.IsNullOrEmpty(checkStatus) && 
-                                            x.CheckStatus == checkStatus && 
-                                            x.Time >= logTime.AddMinutes(-2) && 
+
+                                // Check for duplicates using async EF query to avoid blocking
+                                bool exists = await db.AttendanceLogs.AnyAsync(x =>
+                                    x.UserID == userId && (
+                                        x.Time == logTime || (
+                                            !string.IsNullOrEmpty(checkStatus) &&
+                                            x.CheckStatus == checkStatus &&
+                                            x.Time >= logTime.AddMinutes(-2) &&
                                             x.Time <= logTime.AddMinutes(2)
                                         )
-                                    )
-                                );
+                                    ), stoppingToken);
 
                                 if (!exists)
                                 {
@@ -88,17 +87,17 @@ namespace FingerPrint.BackgroundService
                                     });
                                 }
                             }
-                            await db.SaveChangesAsync();
+                            await db.SaveChangesAsync(stoppingToken);
                         }
                         catch (Exception ex)
                         {
-                            Console.WriteLine($"Error processing device {deviceIp}: {ex.Message}");
+                            _logger.LogError(ex, "Error processing device {DeviceIp}", deviceIp);
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"FPBackgroundService Critical Error: {ex.Message}");
+                    _logger.LogError(ex, "FPBackgroundService critical error");
                 }
 
                 try

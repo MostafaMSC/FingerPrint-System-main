@@ -19,6 +19,7 @@ builder.Services.AddControllers();
 builder.Services.Configure<Microsoft.AspNetCore.Mvc.JsonOptions>(options =>
 {
     options.JsonSerializerOptions.PropertyNamingPolicy = null; // Use PascalCase
+    options.JsonSerializerOptions.PropertyNameCaseInsensitive = true; // Allow camelCase input
 });
 
 // JWT Settings
@@ -26,7 +27,8 @@ builder.Services.Configure<FingerPrint.Configuration.JwtSettings>(
     builder.Configuration.GetSection("JwtSettings")
 );
 var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<FingerPrint.Configuration.JwtSettings>();
-
+builder.Services.Configure<SmtpSettings>(
+    builder.Configuration.GetSection("SmtpSettings"));
 // Dependency Injection
 builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -36,6 +38,7 @@ builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<PythonService>();
 builder.Services.AddHostedService<FPBackgroundService>();
 builder.Services.AddHostedService<FingerPrint.Services.TokenCleanupService>();
+builder.Services.AddScoped<EmailService>();
 
 // Database
 builder.Services.AddDbContext<ApplicationDbContext>(options =>

@@ -59,8 +59,66 @@ const UsersTable = ({ deviceIp }) => {
         !sectionFilter || user.Section === sectionFilter
     );
 
-    const handleExport = () => {
-        exportToExcel(users, tableHeaders.users, 'قائمة_الموظفين', 'الموظفين');
+    const handleExportFiltered = () => {
+        if (filteredUsers.length === 0) {
+            alert('لا توجد بيانات للتصدير');
+            return;
+        }
+
+        // Export only filtered users
+        const exportData = filteredUsers.map((user, index) => ({
+            '#': index + 1,
+            'DeviceUserID': user.DeviceUserID || '-',
+            'Username': user.Username || '-',
+            'Department': user.Department || '-',
+            'Section': user.Section || '-',
+            'Role': user.Role || '-'
+        }));
+
+        const headers = [
+            { key: '#', title: '#' },
+            { key: 'DeviceUserID', title: 'معرف المستخدم' },
+            { key: 'Username', title: 'الاسم' },
+            { key: 'Department', title: 'القسم' },
+            { key: 'Section', title: 'الشعبة' },
+            { key: 'Role', title: 'الدور' }
+        ];
+
+        // Create filename with filter info
+        let filterInfo = '';
+        if (searchTerm) filterInfo += `_بحث_${searchTerm}`;
+        if (departmentFilter) filterInfo += `_قسم_${departmentFilter}`;
+        if (sectionFilter) filterInfo += `_شعبة_${sectionFilter}`;
+
+        exportToExcel(exportData, headers, `قائمة_الموظفين_المفلترة${filterInfo}`, 'الموظفين المفلترين');
+    };
+
+    const handleExportAll = () => {
+        if (users.length === 0) {
+            alert('لا توجد بيانات للتصدير');
+            return;
+        }
+
+        // Export all users
+        const exportData = users.map((user, index) => ({
+            '#': index + 1,
+            'DeviceUserID': user.DeviceUserID || '-',
+            'Username': user.Username || '-',
+            'Department': user.Department || '-',
+            'Section': user.Section || '-',
+            'Role': user.Role || '-'
+        }));
+
+        const headers = [
+            { key: '#', title: '#' },
+            { key: 'DeviceUserID', title: 'معرف المستخدم' },
+            { key: 'Username', title: 'الاسم' },
+            { key: 'Department', title: 'القسم' },
+            { key: 'Section', title: 'الشعبة' },
+            { key: 'Role', title: 'الدور' }
+        ];
+
+        exportToExcel(exportData, headers, 'قائمة_الموظفين_الكاملة', 'الموظفين الكاملة');
     };
 
     const handleOpenAdd = () => {
@@ -200,13 +258,32 @@ const UsersTable = ({ deviceIp }) => {
                         style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid #ccc' }}
                     />
                     <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>
-                        {loading ? 'جاري التحميل...' : `${users.length} موظف`}
+                        {loading ? 'جاري التحميل...' : `إجمالي: ${users.length} | المعروض: ${filteredUsers.length}`}
                     </span>
                     <button className="btn-export" onClick={handleSyncUsers} disabled={loading} style={{ backgroundColor: '#f39c12' }}>
                         🔄 مزامنة من الجهاز
                     </button>
-                    <button className="btn-export" onClick={handleExport} disabled={users.length === 0}>
-                        📥 تصدير Excel
+                    <button
+                        className="btn-export"
+                        onClick={handleExportAll}
+                        disabled={users.length === 0}
+                        title={`تصدير كل الموظفين (${users.length})`}
+                        style={{ backgroundColor: '#3498db' }}
+                    >
+                        📥 تصدير الكل ({users.length})
+                    </button>
+                    <button
+                        className="btn-export"
+                        onClick={handleExportFiltered}
+                        disabled={filteredUsers.length === 0}
+                        title={`تصدير ${filteredUsers.length} موظف مفلتر`}
+                        style={{
+                            opacity: filteredUsers.length === 0 ? 0.5 : 1,
+                            cursor: filteredUsers.length === 0 ? 'not-allowed' : 'pointer',
+                            backgroundColor: '#27ae60'
+                        }}
+                    >
+                        📊 تصدير المفلتر ({filteredUsers.length})
                     </button>
                     <button className="btn-add" onClick={handleOpenAdd}>
                         + إضافة موظف

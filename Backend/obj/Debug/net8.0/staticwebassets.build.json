@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "J2nwBH85El+QkUI42F08EtGVXNCeLRdnYx+8gWH6dJI=",
+  "Hash": "Eu59hT3fLI4XUClBqIP0Ni6tt22jqMr9+TUf2YeRLms=",
   "Source": "FingerPrint",
   "BasePath": "_content/FingerPrint",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "FingerPrint\\wwwroot",
       "Source": "FingerPrint",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\asset-manifest.json",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\asset-manifest.json",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "asset-manifest.json",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\asset-manifest.json"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\favicon.ico",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\index.html",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\logo-light (1).svg",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\logo-light (1).svg",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "logo-light (1).svg",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\logo-light (1).svg"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\logo-light.svg",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\logo-light.svg",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "logo-light.svg",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\logo-light.svg"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\logo192.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\logo192.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "logo192.png",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\logo192.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\logo512.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\logo512.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "logo512.png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\logo512.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\manifest.json",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\manifest.json",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "manifest.json",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\manifest.json"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\robots.txt",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\robots.txt",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "robots.txt",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\robots.txt"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\css\\main.bd43d2b4.css",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\css\\main.bd43d2b4.css",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/css/main.bd43d2b4.css",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\main.bd43d2b4.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\css\\main.bd43d2b4.css.map",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\css\\main.bd43d2b4.css.map",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/css/main.bd43d2b4.css.map",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\static\\css\\main.bd43d2b4.css.map"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\453.72cc2fe9.chunk.js",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\453.72cc2fe9.chunk.js",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/js/453.72cc2fe9.chunk.js",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\453.72cc2fe9.chunk.js"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\453.72cc2fe9.chunk.js.map",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\453.72cc2fe9.chunk.js.map",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/js/453.72cc2fe9.chunk.js.map",
       "AssetKind": "All",
@@ -264,10 +264,67 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\453.72cc2fe9.chunk.js.map"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\main.35711c91.js",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.2548d19c.js",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "static/js/main.2548d19c.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.2548d19c.js"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.2548d19c.js.LICENSE.txt",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "static/js/main.2548d19c.js.LICENSE.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.2548d19c.js.LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.2548d19c.js.map",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "static/js/main.2548d19c.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.2548d19c.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.35711c91.js",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/js/main.35711c91.js",
       "AssetKind": "All",
@@ -283,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\main.35711c91.js"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\main.35711c91.js.LICENSE.txt",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.35711c91.js.LICENSE.txt",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/js/main.35711c91.js.LICENSE.txt",
       "AssetKind": "All",
@@ -302,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\main.35711c91.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\main.35711c91.js.map",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.35711c91.js.map",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/js/main.35711c91.js.map",
       "AssetKind": "All",
@@ -321,10 +378,67 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\main.35711c91.js.map"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\main.c017837e.js",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.5d1e17e6.js",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "static/js/main.5d1e17e6.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.5d1e17e6.js"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.5d1e17e6.js.LICENSE.txt",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "static/js/main.5d1e17e6.js.LICENSE.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.5d1e17e6.js.LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.5d1e17e6.js.map",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "static/js/main.5d1e17e6.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.5d1e17e6.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.c017837e.js",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/js/main.c017837e.js",
       "AssetKind": "All",
@@ -340,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\main.c017837e.js"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\main.c017837e.js.LICENSE.txt",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.c017837e.js.LICENSE.txt",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/js/main.c017837e.js.LICENSE.txt",
       "AssetKind": "All",
@@ -359,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\main.c017837e.js.LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\js\\main.c017837e.js.map",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.c017837e.js.map",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/js/main.c017837e.js.map",
       "AssetKind": "All",
@@ -378,10 +492,124 @@
       "OriginalItemSpec": "wwwroot\\static\\js\\main.c017837e.js.map"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\media\\fa-brands-400.1c5c7716b05754cb4eab.woff2",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.cb4db7bf.js",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "static/js/main.cb4db7bf.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.cb4db7bf.js"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.cb4db7bf.js.LICENSE.txt",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "static/js/main.cb4db7bf.js.LICENSE.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.cb4db7bf.js.LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.cb4db7bf.js.map",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "static/js/main.cb4db7bf.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.cb4db7bf.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.f8d01518.js",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "static/js/main.f8d01518.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.f8d01518.js"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.f8d01518.js.LICENSE.txt",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "static/js/main.f8d01518.js.LICENSE.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.f8d01518.js.LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\js\\main.f8d01518.js.map",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
+      "BasePath": "_content/FingerPrint",
+      "RelativePath": "static/js/main.f8d01518.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\static\\js\\main.f8d01518.js.map"
+    },
+    {
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\media\\fa-brands-400.1c5c7716b05754cb4eab.woff2",
+      "SourceId": "FingerPrint",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/media/fa-brands-400.1c5c7716b05754cb4eab.woff2",
       "AssetKind": "All",
@@ -397,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\fa-brands-400.1c5c7716b05754cb4eab.woff2"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\media\\fa-regular-400.6f05ca9ab7b5345dbc07.woff2",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\media\\fa-regular-400.6f05ca9ab7b5345dbc07.woff2",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/media/fa-regular-400.6f05ca9ab7b5345dbc07.woff2",
       "AssetKind": "All",
@@ -416,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\fa-regular-400.6f05ca9ab7b5345dbc07.woff2"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\media\\fa-solid-900.8ae0d37556ff1e685de2.woff2",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\media\\fa-solid-900.8ae0d37556ff1e685de2.woff2",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/media/fa-solid-900.8ae0d37556ff1e685de2.woff2",
       "AssetKind": "All",
@@ -435,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\fa-solid-900.8ae0d37556ff1e685de2.woff2"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\static\\media\\fa-v4compatibility.e4340c52a50e727c6afa.woff2",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\static\\media\\fa-v4compatibility.e4340c52a50e727c6afa.woff2",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "static/media/fa-v4compatibility.e4340c52a50e727c6afa.woff2",
       "AssetKind": "All",
@@ -454,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\static\\media\\fa-v4compatibility.e4340c52a50e727c6afa.woff2"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\01JMCC2ZGZPWD1K585X8A96G4A.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\01JMCC2ZGZPWD1K585X8A96G4A.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/01JMCC2ZGZPWD1K585X8A96G4A.png",
       "AssetKind": "All",
@@ -473,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\01JMCC2ZGZPWD1K585X8A96G4A.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\01JMCCN45ADKPHZQPC0N8Q68MQ.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\01JMCCN45ADKPHZQPC0N8Q68MQ.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/01JMCCN45ADKPHZQPC0N8Q68MQ.png",
       "AssetKind": "All",
@@ -492,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\01JMCCN45ADKPHZQPC0N8Q68MQ.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\01JMCDB8GA1ZVGWVJXYYFM4EPK.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\01JMCDB8GA1ZVGWVJXYYFM4EPK.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/01JMCDB8GA1ZVGWVJXYYFM4EPK.png",
       "AssetKind": "All",
@@ -511,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\01JMCDB8GA1ZVGWVJXYYFM4EPK.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\499562706073322",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\499562706073322",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/499562706073322",
       "AssetKind": "All",
@@ -530,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\499562706073322"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\about-circle.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\about-circle.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/about-circle.png",
       "AssetKind": "All",
@@ -549,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\about-circle.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\about-icon1.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\about-icon1.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/about-icon1.png",
       "AssetKind": "All",
@@ -568,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\about-icon1.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\about-icon2.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\about-icon2.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/about-icon2.png",
       "AssetKind": "All",
@@ -587,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\about-icon2.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\about-line.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\about-line.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/about-line.png",
       "AssetKind": "All",
@@ -606,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\about-line.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\all.min.css",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\all.min.css",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/all.min.css",
       "AssetKind": "All",
@@ -625,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\all.min.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\animate.css",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\animate.css",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/animate.css",
       "AssetKind": "All",
@@ -644,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\animate.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\banner-line.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\banner-line.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/banner-line.png",
       "AssetKind": "All",
@@ -663,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\banner-line.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\bigHome.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\bigHome.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/bigHome.png",
       "AssetKind": "All",
@@ -682,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\bigHome.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\bootstrap.min.css",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\bootstrap.min.css",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/bootstrap.min.css",
       "AssetKind": "All",
@@ -701,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\bootstrap.min.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\bootstrap.min.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/bootstrap.min.js.download",
       "AssetKind": "All",
@@ -720,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\bootstrap.min.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\brand-image1.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\brand-image1.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/brand-image1.png",
       "AssetKind": "All",
@@ -739,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\brand-image1.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\brand-image2.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\brand-image2.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/brand-image2.png",
       "AssetKind": "All",
@@ -758,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\brand-image2.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\brand-image3.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\brand-image3.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/brand-image3.png",
       "AssetKind": "All",
@@ -777,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\brand-image3.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\brand-shape.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\brand-shape.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/brand-shape.png",
       "AssetKind": "All",
@@ -796,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\brand-shape.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image1.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\case-image1.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/case-image1.png",
       "AssetKind": "All",
@@ -815,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\case-image1.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image2.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\case-image2.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/case-image2.png",
       "AssetKind": "All",
@@ -834,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\case-image2.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image3.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\case-image3.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/case-image3.png",
       "AssetKind": "All",
@@ -853,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\case-image3.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image4.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\case-image4.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/case-image4.png",
       "AssetKind": "All",
@@ -872,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\case-image4.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image5.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\case-image5.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/case-image5.png",
       "AssetKind": "All",
@@ -891,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\case-image5.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image6.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\case-image6.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/case-image6.png",
       "AssetKind": "All",
@@ -910,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\case-image6.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image7.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\case-image7.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/case-image7.png",
       "AssetKind": "All",
@@ -929,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\case-image7.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\case-image8.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\case-image8.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/case-image8.png",
       "AssetKind": "All",
@@ -948,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\case-image8.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\css2",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\css2",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/css2",
       "AssetKind": "All",
@@ -967,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\css2"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\data2.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\data2.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/data2.png",
       "AssetKind": "All",
@@ -986,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\data2.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\dataanalysis.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\dataanalysis.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/dataanalysis.png",
       "AssetKind": "All",
@@ -1005,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\dataanalysis.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\earth.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\earth.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/earth.png",
       "AssetKind": "All",
@@ -1024,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\earth.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\fbevents.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\fbevents.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/fbevents.js.download",
       "AssetKind": "All",
@@ -1043,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\fbevents.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\footer-regular-left.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\footer-regular-left.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/footer-regular-left.png",
       "AssetKind": "All",
@@ -1062,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\footer-regular-left.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\footer-regular-right.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\footer-regular-right.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/footer-regular-right.png",
       "AssetKind": "All",
@@ -1081,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\footer-regular-right.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\footer-shadow-shape.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\footer-shadow-shape.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/footer-shadow-shape.png",
       "AssetKind": "All",
@@ -1100,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\footer-shadow-shape.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\footer-solid-left.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\footer-solid-left.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/footer-solid-left.png",
       "AssetKind": "All",
@@ -1119,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\footer-solid-left.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\footer-solid-right.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\footer-solid-right.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/footer-solid-right.png",
       "AssetKind": "All",
@@ -1138,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\footer-solid-right.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\insight.min.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\insight.min.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/insight.min.js.download",
       "AssetKind": "All",
@@ -1157,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\insight.min.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\isotope.pkgd.min.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\isotope.pkgd.min.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/isotope.pkgd.min.js.download",
       "AssetKind": "All",
@@ -1176,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\isotope.pkgd.min.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\jquery-3.7.1.min.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\jquery-3.7.1.min.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/jquery-3.7.1.min.js.download",
       "AssetKind": "All",
@@ -1195,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\jquery-3.7.1.min.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\jquery.counterup.min.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\jquery.counterup.min.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/jquery.counterup.min.js.download",
       "AssetKind": "All",
@@ -1214,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\jquery.counterup.min.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\jquery.waypoints.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\jquery.waypoints.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/jquery.waypoints.js.download",
       "AssetKind": "All",
@@ -1233,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\jquery.waypoints.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\logo-light.svg",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\logo-light.svg",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/logo-light.svg",
       "AssetKind": "All",
@@ -1252,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\logo-light.svg"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\magnific-popup.css",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\magnific-popup.css",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/magnific-popup.css",
       "AssetKind": "All",
@@ -1271,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\magnific-popup.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\magnific-popup.min.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\magnific-popup.min.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/magnific-popup.min.js.download",
       "AssetKind": "All",
@@ -1290,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\magnific-popup.min.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\meanmenu.css",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\meanmenu.css",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/meanmenu.css",
       "AssetKind": "All",
@@ -1309,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\meanmenu.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\meanmenu.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\meanmenu.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/meanmenu.js.download",
       "AssetKind": "All",
@@ -1328,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\meanmenu.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\nice-select.css",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\nice-select.css",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/nice-select.css",
       "AssetKind": "All",
@@ -1347,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\nice-select.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\nice-select.min.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\nice-select.min.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/nice-select.min.js.download",
       "AssetKind": "All",
@@ -1366,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\nice-select.min.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\offer-bg-shape-left.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\offer-bg-shape-left.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/offer-bg-shape-left.png",
       "AssetKind": "All",
@@ -1385,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\offer-bg-shape-left.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\offer-bg-shape-right.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\offer-bg-shape-right.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/offer-bg-shape-right.png",
       "AssetKind": "All",
@@ -1404,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\offer-bg-shape-right.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\offer-shadow-shape.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\offer-shadow-shape.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/offer-shadow-shape.png",
       "AssetKind": "All",
@@ -1423,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\offer-shadow-shape.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\pace.min.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\pace.min.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/pace.min.js.download",
       "AssetKind": "All",
@@ -1442,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\pace.min.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\process-image1.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\process-image1.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/process-image1.png",
       "AssetKind": "All",
@@ -1461,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\process-image1.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\process-image2.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\process-image2.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/process-image2.png",
       "AssetKind": "All",
@@ -1480,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\process-image2.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\process-image3.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\process-image3.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/process-image3.png",
       "AssetKind": "All",
@@ -1499,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\process-image3.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\script.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\script.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/script.js.download",
       "AssetKind": "All",
@@ -1518,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\script.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\section-title.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\section-title.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/section-title.png",
       "AssetKind": "All",
@@ -1537,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\section-title.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\service-bg-shape.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\service-bg-shape.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/service-bg-shape.png",
       "AssetKind": "All",
@@ -1556,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\service-bg-shape.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\service-icon1.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\service-icon1.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/service-icon1.png",
       "AssetKind": "All",
@@ -1575,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\service-icon1.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\service-icon3.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\service-icon3.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/service-icon3.png",
       "AssetKind": "All",
@@ -1594,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\service-icon3.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\service-item-shape.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\service-item-shape.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/service-item-shape.png",
       "AssetKind": "All",
@@ -1613,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\service-item-shape.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\service-item-shape(1).png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\service-item-shape(1).png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/service-item-shape(1).png",
       "AssetKind": "All",
@@ -1632,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\service-item-shape(1).png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\smallHome.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\smallHome.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/smallHome.png",
       "AssetKind": "All",
@@ -1651,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\smallHome.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\ssl-icon.png",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\ssl-icon.png",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/ssl-icon.png",
       "AssetKind": "All",
@@ -1670,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\ssl-icon.png"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\style232.css",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\style232.css",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/style232.css",
       "AssetKind": "All",
@@ -1689,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\style232.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\styles.css",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\styles.css",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/styles.css",
       "AssetKind": "All",
@@ -1708,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\styles.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\swiper-bundle.min.css",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\swiper-bundle.min.css",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/swiper-bundle.min.css",
       "AssetKind": "All",
@@ -1727,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\swiper-bundle.min.css"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\swiper-bundle.min.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\swiper-bundle.min.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/swiper-bundle.min.js.download",
       "AssetKind": "All",
@@ -1746,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\swiper-bundle.min.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\vcd15cbe7772f49c399c6a5babf22c1241717689176015",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\vcd15cbe7772f49c399c6a5babf22c1241717689176015",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/vcd15cbe7772f49c399c6a5babf22c1241717689176015",
       "AssetKind": "All",
@@ -1765,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\vcd15cbe7772f49c399c6a5babf22c1241717689176015"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk_files\\wow.min.js.download",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk_files\\wow.min.js.download",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk_files/wow.min.js.download",
       "AssetKind": "All",
@@ -1784,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\TwoKeyOk_files\\wow.min.js.download"
     },
     {
-      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\TwoKeyOk.html",
+      "Identity": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\TwoKeyOk.html",
       "SourceId": "FingerPrint",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangement\\Backend\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\lenovo\\Desktop\\Arrangment2\\FingerPrint-System-main\\Backend\\wwwroot\\",
       "BasePath": "_content/FingerPrint",
       "RelativePath": "TwoKeyOk.html",
       "AssetKind": "All",

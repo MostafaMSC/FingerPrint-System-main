@@ -27,7 +27,20 @@ namespace FingerPrint.Services
 
         public bool VerifyPassword(string password, string hash)
         {
-            var hashBytes = Convert.FromBase64String(hash);
+            if (string.IsNullOrEmpty(hash)) return false;
+
+            byte[] hashBytes;
+            try
+            {
+                hashBytes = Convert.FromBase64String(hash);
+            }
+            catch
+            {
+                return false;
+            }
+
+            if (hashBytes.Length < SaltSize + KeySize) return false;
+
             var salt = new byte[SaltSize];
             Array.Copy(hashBytes, 0, salt, 0, SaltSize);
 

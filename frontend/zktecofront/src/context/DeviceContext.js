@@ -6,7 +6,7 @@ export const devices = [
     { name: 'Head Quarter', ip: '172.16.1.40' },
     { name: 'Dawoodi-Data Center', ip: '192.168.150.233' },
     { name: 'Customer Center', ip: '10.4.44.15' },
-    { name: 'Dawoodi-Desaster Recovery', ip: '192.168.11.184' },
+    { name: 'Cairo-Desaster Recovery', ip: '192.168.11.184' },
 ];
 export const useDevice = () => useContext(DeviceContext);
 

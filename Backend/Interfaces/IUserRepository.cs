@@ -11,5 +11,7 @@ namespace FingerPrint.Interfaces
         Task<UserInfo> CreateAsync(UserInfo user, CancellationToken cancellationToken = default);
         Task UpdateAsync(UserInfo user, CancellationToken cancellationToken = default);
         Task<bool> UsernameExistsAsync(string username, CancellationToken cancellationToken = default);
+        Task<UserInfo?> GetByUsernameOrEmailAsync(string usernameOrEmail, CancellationToken cancellationToken = default);
+        Task<bool> EmailExistsAsync(string email, CancellationToken cancellationToken = default);
     }
 }

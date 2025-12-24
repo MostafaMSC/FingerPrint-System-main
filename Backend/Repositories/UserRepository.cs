@@ -48,5 +48,16 @@ namespace FingerPrint.Repositories
         {
             return await _context.UserInfos.AnyAsync(u => u.Username == username, cancellationToken);
         }
+
+        public async Task<UserInfo?> GetByUsernameOrEmailAsync(string usernameOrEmail, CancellationToken cancellationToken = default)
+        {
+            return await _context.UserInfos
+                .FirstOrDefaultAsync(u => u.Username == usernameOrEmail || u.Email == usernameOrEmail, cancellationToken);
+        }
+
+        public async Task<bool> EmailExistsAsync(string email, CancellationToken cancellationToken = default)
+        {
+            return await _context.UserInfos.AnyAsync(u => u.Email == email, cancellationToken);
+        }
     }
 }
